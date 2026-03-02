@@ -1,0 +1,835 @@
+\documentclass{beamer}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage{ctex}
+\usepackage[english]{babel}
+
+\UseRawInputEncoding
+
+% Cannot enable in Xelatex
+\usepackage{pgfpages}
+% \setbeameroption{hide notes} % Only slides
+% \setbeameroption{show only notes} % Only notes
+% \setbeameroption{show notes on second screen}
+
+% Other packages
+\usepackage{latexsym,amsmath,xcolor,multicol,booktabs,calligra}
+\usepackage{graphicx,listings,stackengine}
+\usepackage{animate}
+
+\definecolor{best}{rgb}{.8, .96, .94}
+\usepackage{xcolor, colortbl}
+
+% Additional packages
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+\SetKwComment{Comment}{/* }{ */}   % The argument will be surrounded by /* ... */
+\SetAlCapFnt{\footnotesize}        % Make caption text smaller
+\SetAlCapNameFnt{\footnotesize}    % Make "Algorithm" label smaller
+
+% \usepackage{noto}
+\usepackage{fontspec}
+\usepackage{amsmath}       % For math environments
+\usepackage{unicode-math}  % Enables \setmathfont
+% \setmainfont{Times New Roman}   % Sets main text font
+% \setsansfont{Times New Roman}
+% \setmonofont[Color={0019D4}]{Courier New}
+\setmathfont{Libertinus Math}        % Sets math font: Latin Modern Math (default in many setups), TeX Gyre Pagella Math, XITS Math, Asana Math, Libertinus Math
+
+% \usepackage{algorithmic}
+\usepackage{comment}
+\usepackage{multicol}
+\usepackage{multirow}
+% \usepackage{subfigure}
+\usepackage{subcaption}
+\usepackage{verbatim}
+\usepackage[font=scriptsize]{caption}   % Caption in Figures and Tables
+
+%% Enable only in Xelatex
+% \usepackage{pstricks}
+
+% Set hyperlink colors
+\begin{comment}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,  % Color para enlaces internos
+    filecolor=darkblue,  % Color para enlaces a archivos
+    urlcolor=darkblue    % Color para URLs
+}
+\end{comment}
+
+\author[CIARC-2025]{CIARC-2025}
+
+\title{Applications of Graph Neural Networks}
+% \subtitle{Presentation}
+% \institute [Artificial Intelligence School]{School of Computer Science\\Go University}
+\institute [LAAD] 
+{
+\vspace*{-0.1cm}
+% \includegraphics[width=1.6cm]{pic/pucp.png}
+\hspace*{0.25cm}~%
+\includegraphics[width=4.0cm]{pic/logo_graph.png}
+\hspace*{0.25cm}~%
+% \includegraphics[width=1.4cm]{pic/unmsm.png}
+\vspace*{0.35cm}\\
+
+%Artificial Intelligence PUCP (IA-PUCP)
+}
+
+\date{\scriptsize August 28, 2025}
+% \date{\today}
+\usepackage{YTU}
+
+% defs
+\def\cmd#1{\texttt{\color{red}\footnotesize $\backslash$#1}}
+\def\env#1{\texttt{\color{blue}\footnotesize #1}}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+\definecolor{halfgray}{gray}{0.55}
+
+\lstset{
+    basicstyle=\ttfamily\small,
+    keywordstyle=\bfseries\color{deepblue},
+    emphstyle=\ttfamily\color{deepred},    % Custom highlighting style
+    stringstyle=\color{deepgreen},
+    numbers=left,
+    numberstyle=\small\color{halfgray},
+    rulesepcolor=\color{red!20!green!20!blue!20},
+    frame=shadowbox,
+}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+    \begin{figure}[ht!]
+        \begin{center}
+            % \includegraphics[width=0.2\linewidth]{pic/iapucp_logo.jpg}
+       \end{center}
+    \end{figure}
+    
+    \begin{note}
+        {Introduce your self}
+    \end{note}
+\end{frame}
+
+\begin{frame}
+    \tableofcontents[sectionstyle=show,subsectionstyle=show/shaded/hide,subsubsectionstyle=show/shaded/hide]
+    % \tableofcontents[sectionstyle=show,subsectionstyle=hide,subsubsectionstyle=hide]
+\end{frame}
+
+\section{Theoretical Framework}
+    \begin{frame}{Algorithms on Networks}
+        \begin{columns}[t] % The "c" centered vertical alignment, "t" top vertical alignment
+            \begin{column}{0.45\textwidth}
+               \begin{itemize}
+                    \item \textbf{Network traversal}
+                    \begin{itemize}
+                        \item Breadth-First Search
+                        \item Depth-First Search
+                    \end{itemize}
+                \end{itemize}
+            \end{column}
+            
+            \begin{column}{0.55\textwidth}
+               \begin{itemize}
+                    \item \textbf{Shortest path algorithms}
+                    \begin{itemize}
+                        \item Dijkstra
+                        \item Floyd–Warshall
+                        \item Bellman-Ford
+                    \end{itemize}
+                \end{itemize}
+            \end{column}
+        \end{columns}
+
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+
+    \begin{frame}{Graphs}
+        Graph is a data structure and is defined as $G = (V, E)$, where $V = \{v_1, v_2, ..., v_{n}\}$ is the nodes (or \textit{vertices}, or \textit{points}) set and $E = \{e_1, e_2, ..., e_{m}\}, e_i \in V \times V$ a set of edges (or \textit{lines}, or \textit{arcs}) formed by unordered pairs of nodes. \\
+
+        \vspace{2mm}
+        \scriptsize Number of nodes is denoted $|V|$. \\
+         Number of edges is denoted $|E|$.
+        
+        \begin{figure}[ht!]
+            \centering
+            \includegraphics[width=0.25\linewidth]{pic/graph_example.pdf}
+            \caption{\scriptsize Graph example.}
+        \end{figure}
+    \end{frame}
+
+    \begin{frame}{Graphs}
+        Furthermore, each edge $e \in E$ is said to join two vertices. If $e$ joins $u, v \in V$, then $e = (u, v)$. Vertices $u$ and $v$ are said to be adjacent. \\
+        
+        \begin{exampleblock}{Neighborhood}
+            \begin{equation}
+            N(v) = \{w \in V ∣ v \neq w, \exists \; e \in E: e = (u, v)\}
+            \label{eq:neighborhood}
+            \end{equation}
+        \end{exampleblock}
+
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+    
+    \begin{frame}{Breadth-First Search (BFS)}
+        BFS is a graph traversal algorithm that explores nodes level by level, visiting all nodes at a given distance from the starting node before moving to the next level. \newline
+
+        Description:
+        \begin{itemize}
+            \item Uses a queue (FIFO) to manage the nodes to be explored.
+            \item Marks visited nodes to avoid cycles or repeated visits.
+            \item Ideal for finding the shortest path in unweighted graphs.
+        \end{itemize}
+
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+
+    \begin{frame}{BFS algorithm}        
+        \begin{columns}[t] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+            \begin{column}{0.6\textwidth}
+                \begin{enumerate}
+                    \item Visit the adjacent unvisited node. Mark as visited, display, and insert (queue) in a queue.
+                    \item In case no adjacent node is found, remove the first node from the queue.
+                    \item Repeat steps 1, and 2 until the queue is empty.
+                \end{enumerate}
+            \end{column}
+            
+            \begin{column}{0.4\textwidth}
+                \begin{figure}[ht!]
+                    \centering
+                    \includegraphics[width=0.8\linewidth]{pic/bfs_v1.png}
+                    \caption{BFS traversal from node 4 are 4, 0, 2, 3, 1.}
+                    % \caption*{Adapted from \cite{labonne2023hands}.}
+                    \label{fig:bfs}
+                \end{figure}
+            \end{column}
+        \end{columns}
+        
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+
+    \begin{comment}
+    \begin{frame}{BFS algorithm pseudocode}   
+        \begin{algorithm}[H]
+            \scriptsize
+            
+            % \footnotesize
+            \DontPrintSemicolon
+            % \SetAlgoLined
+            % \SetNoline
+            
+            \SetKwInOut{Input}{Input}
+            \SetKwInOut{Output}{Output}
+            
+            \Input{$G=(V, E)$, $s$ \Comment*[r]{Graph $G$ and a source node $s$}}
+            \Output{$D[n]$ and $Pred[n]$ \Comment*[r]{distances and predecessors of nodes}}
+            % \BlankLine
+            % max $\leftarrow A[0]$\;
+            % $X \gets x$\;
+            \For{all $v \in V - \{s\}$ \Comment*[r]{initialize all nodes except source $s$}}{ 
+                $D[v] \gets \infty$\;
+                $Pred[v] \gets nil$\;
+            }
+            $D[s] \gets 0$\;
+            $Pred[s] \gets s$\;
+            $Q \gets s$\;
+            \While{$Q \neq \varnothing$}{
+                $v \gets deque(Q)$\;
+                \For{all $(u, v) \in E$ \Comment*[r]{process all neighbors of node $u$}}{
+                    \If{$D[u]$ = \infty}{
+                        $D[u] \gets D[v] + 1$\;
+                        $Pred[u] \gets v$\;
+                        $enque(Q, u)$\;
+                    }
+                }
+            }
+            % \Return max\;
+            \caption{BFS.}
+            \label{tab:algorithm_bfs}
+        \end{algorithm}
+
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+    \end{comment}
+
+    \begin{frame}{BFS algorithm pseudocode}        
+        \begin{algorithm}[H]
+            \scriptsize
+    
+            % \footnotesize
+            \DontPrintSemicolon
+            % \SetAlgoLined
+            % \SetNoline
+            
+            \SetKwInOut{Input}{Input}
+            \SetKwInOut{Output}{Output}
+            
+            \Input{$G$, $s$ \Comment*[r]{Graph $G$ and a source node $s$}}
+            \Output{All nodes reachable from $s$}
+            
+            % \BlankLine
+            $Q \gets \varnothing$ \Comment*[r]{Create an empty queue}
+            $V \gets \varnothing$ \Comment*[r]{Create an empty set of visited}
+            $enqueue(Q, s)$\;
+            $append(V, s)$\;
+            
+            \While{$Q \neq \varnothing$}{
+                $v \gets dequeue(Q)$\;
+                $print(v)$\;
+
+                \ForEach{$u \in N(v)$}{ % \Comment*[r]{process all neighbors of node $u$}
+                    \If{$u \notin V$}{
+                        $append(V, u)$\;
+                        $enqueue(Q, u)$
+                    }
+                }
+            }
+            % \Return max\;
+            \caption{BFS.}
+            \label{tab:algorithm_dfs}
+        \end{algorithm}
+        
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+
+    \begin{comment}
+        BFS(G, start):
+          create a queue Q
+          mark start as visited
+          enqueue start into Q
+        
+          while Q is not empty:
+            v = Q.dequeue()
+            for each neighbor u of v:
+              if u is not visited:
+                mark u as visited
+                Q.enqueue(u)
+    \end{comment}
+    
+    \begin{comment}
+        Input: Graph G(V, E), starting node s
+        Output: All nodes reachable from s
+        
+        1. Create an empty queue Q
+        2. Create an empty set Visited
+        3. Add s to Q
+        4. Mark s as visited
+        
+        5. While Q is not empty:
+            a. Dequeue node v from Q
+            b. Print or process v
+            c. For each neighbor u of v:
+                i. If u is not in Visited:
+                    - Mark u as visited
+                    - Enqueue u into Q
+    \end{comment}   
+
+    \begin{frame}{BFS example}
+        \begin{columns}[t] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment            
+            \begin{column}{0.3\textwidth}
+                \begin{figure}[ht!]
+                    \centering
+                    \includegraphics[width=0.9\linewidth]{pic/graph_examples.pdf}
+                    \caption{Example of BFS traversal.}
+                    % \caption*{Adapted from \cite{labonne2023hands}.}
+                    \label{fig:graph_examples_bfs}
+                \end{figure}
+            \end{column}
+
+             \begin{column}{0.7\textwidth}
+                \begin{itemize}
+                    \item $s:$
+                    \item $Q:$
+                    \item $V:$
+                    \item $v:$
+                    \item $N(v):$
+                    \item $Output:$
+                \end{itemize}
+            \end{column}
+        \end{columns}
+        
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+    
+    \begin{frame}{BFS applications}
+        \begin{itemize}
+            \item Finding the shortest path.
+            % \item Detecting connected components.
+            \item Broadcasting on networks.
+            \item Check whether a graph is bipartite.
+        \end{itemize}
+        
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+
+    \begin{frame}{Depth-First Search (DFS)}
+        DFS is a graph traversal algorithm that explores as deeply as possible along each branch before backtracking. \newline
+
+        Description:
+        \begin{itemize}
+            \item Uses a stack (LIFO) to manage the nodes to be explored.
+            \item Can be implemented recursively or iteratively.
+            \item Explores a full path before returning to previous nodes.
+        \end{itemize}
+
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+    
+    \begin{frame}{DFS algorithm}
+        \begin{columns}[t] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+            \begin{column}{0.6\textwidth}
+                \begin{enumerate}
+                    \item Visit the adjacent unvisited node. Mark as visited, show, and push in a stack.
+                    \item In case no adjacent nodes are found, all nodes in the stack that do not have adjacent nodes are popped.
+                    \item Repeat steps 1, and 2 until the stack is empty.
+                \end{enumerate}
+            \end{column}
+            
+            \begin{column}{0.4\textwidth}
+                \begin{figure}[ht!]
+                    \centering
+                    \includegraphics[width=0.7\linewidth]{pic/dfs_v1.png}
+                    \caption{DFS traversal from node 4 are 4, 0, 1, 2, 3.}
+                    % \caption*{Adapted from \cite{labonne2023hands}.}
+                    \label{fig:dfs}
+                \end{figure}
+            \end{column}
+        \end{columns}
+        
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+
+    \begin{comment}
+    \begin{frame}{DFS algorithm pseudocode}        
+        \begin{algorithm}[H]
+            \scriptsize
+            
+            % \footnotesize
+            \DontPrintSemicolon
+            % \SetAlgoLined
+            % \SetNoline
+            
+            \SetKwInOut{Input}{Input}
+            \SetKwInOut{Output}{Output}
+            
+            \Input{$G=(V, E)$, $v$ \Comment*[r]{Graph $G$ and a source node $v$}}
+            \Output{$Pred[n], d[n]$ and $f[n]$ \Comment*[r]{place of a node and its visit times}}
+            % \BlankLine
+            % max $\leftarrow A[0]$\;
+            $time \gets 0$\;
+            $Marked[n]$\;
+            $S \gets \varnothing$\;
+            \For{all $u \in V$}{ % \Comment*[r]{initialize all nodes}
+                $Marked[u] \gets false$\;
+                $Pred[u] \gets nil$\;
+            }
+            $push(S, v)$\;
+            \While{$S \neq \varnothing$}{
+                $u \gets pop(S)$\;
+                \If{$visited[u] \neq true$}{
+                    $visited[u] \gets true$\;
+                    $Pred[u] \gets v$\;
+
+                    \For{all $(u, w) \in E$}{ % \Comment*[r]{process all neighbors of node $u$}
+                        $push(S, w)$
+                    }
+                }
+            }
+            % \Return max\;
+            \caption{DFS.}
+            \label{tab:algorithm_dfs}
+        \end{algorithm}
+        
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+    \end{comment}
+
+    \begin{frame}{DFS algorithm pseudocode}        
+        \begin{algorithm}[H]
+            \scriptsize
+    
+            % \footnotesize
+            \DontPrintSemicolon
+            % \SetAlgoLined
+            % \SetNoline
+            
+            \SetKwInOut{Input}{Input}
+            \SetKwInOut{Output}{Output}
+            
+            \Input{$G$, $s$ \Comment*[r]{Graph $G$ and a source node $s$}}
+            \Output{All nodes reachable from $s$}
+            
+            % \BlankLine
+            $S \gets \varnothing$ \Comment*[r]{Create an empty stack}
+            $V \gets \varnothing$ \Comment*[r]{Create an empty set of visited}
+            $push(S, s)$
+
+            \While{$S \neq \varnothing$}{
+                $v \gets pop(S)$\;
+                \If{$v \notin V$}{
+                    $append(V, v)$\;
+                    $print(v)$\;
+                    \Comment*[r]{in reverse order, if needed}
+                    \ForEach{$u \in N(v)$}{
+                        \If{$u \notin V$}{
+                            $push(S, u)$
+                        }
+                    }
+                }
+            }
+            % \Return max\;
+            \caption{DFS.}
+            \label{tab:algorithm_dfs}
+        \end{algorithm}
+        
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+
+    \begin{comment}
+        Input: Graph G(V, E), starting node s
+        Output: All nodes reachable from s
+        
+        1. Create an empty stack S
+        2. Create an empty set Visited
+        3. Push s onto S
+        
+        4. While S is not empty:
+            a. Pop node v from S
+            b. If v is not in Visited:
+                i. Mark v as visited
+                ii. Print or process v
+                iii. For each neighbor u of v (in reverse order, if needed):
+                    - If u is not in Visited:
+                        - Push u onto S
+    \end{comment}
+
+    \begin{frame}{DFS example}
+        \begin{columns}[t] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment            
+            \begin{column}{0.3\textwidth}
+                \begin{figure}[ht!]
+                    \centering
+                    \includegraphics[width=0.9\linewidth]{pic/graph_examples.pdf}
+                    \caption{Example of DFS traversal.}
+                    % \caption*{Adapted from \cite{labonne2023hands}.}
+                    \label{fig:graph_examples_dfs}
+                \end{figure}
+            \end{column}
+
+             \begin{column}{0.7\textwidth}
+                \begin{itemize}
+                    \item $s:$
+                    \item $S:$
+                    \item $V:$
+                    \item $v:$
+                    \item $N(v):$
+                    \item $Output:$
+                \end{itemize}
+            \end{column}
+        \end{columns}
+        
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+
+    \begin{frame}{DFS applications}
+        \begin{itemize}
+            \item Testing connectivity
+            \item Detecting cycles
+            \item Topological sorting (in DAGs).
+        \end{itemize}
+        
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+
+    \begin{frame}{Dijkstra's Algorithm}
+        Dijkstra's algorithm finds the shortest path from a source node to all other nodes in a directed or undirected graph with non-negative edge weights. \newline
+
+        Description:
+        \begin{itemize}
+            \item Uses a priority queue to select the closest unvisited node.
+            \item Maintains the minimum known distance to each node.
+            \item It is a weighted generalization of BFS.
+        \end{itemize}
+
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+
+    \begin{frame}{Dijkstra's algorithm}
+        \begin{exampleblock}{Idea}
+            Does the shortest path from $a$ to $c$ go through $b$?
+            
+            \begin{figure}[ht!]
+                \centering
+                \includegraphics[width=0.25\linewidth]{pic/dijkstra_idea.pdf}
+                \caption{Example.}
+                \label{fig:dijkstra_idea}
+            \end{figure}
+        \end{exampleblock}
+        % \vspace{-5mm}
+
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+
+    \begin{comment}
+    \begin{frame}{Dijkstra's algorithm}
+        \begin{columns}[t] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+            \begin{column}{0.6\textwidth}
+                \scriptsize
+                Initially the source node, with its cost of $0$, is added to the unvisited set. Then the algorithm proceeds as follows as long as there is at least one node in the unvisited set.
+                % 2015_Book_dataStructureAndAlgorithm
+                \begin{enumerate}
+                    \item Remove the node we’ll call current from the unvisited set with the least cost. All other paths to this node must have greater cost because otherwise they would have been in the unvisited set with smaller cost.
+                    \item Add current to the visited set.
+                    \item  For every vertex, adjacent, that is adjacent to current, check to see if adjacent is in the visited set or not. If adjacent is in the visited set, then we know the minimum cost of reaching this vertex from the source so don’t do anything.
+                    \item If adjacent is not in the visited set, compute a new cost for arriving at adjacent by traversing the edge, e, from current to adjacent. A new cost can be found by adding the cost of getting to current and e‘s weight. If this new cost is better than the current cost of getting to adjacent, then update adjacent‘s cost and remember that current is the previous vertex of adjacent. Also, add adjacent to the unvisited set.
+                \end{enumerate}
+            \end{column}
+            
+            \begin{column}{0.4\textwidth}
+                \begin{figure}[ht!]
+                    \centering
+                    \includegraphics[width=0.7\linewidth]{pic/dfs.png}
+                    \caption{DFS traversal from node 1.}
+                    % \caption*{Adapted from \cite{labonne2023hands}.}
+                    \label{fig:dijkstra}
+                \end{figure}
+            \end{column}
+        \end{columns}
+        
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+    \end{comment}
+
+    \begin{comment}
+        Input: Graph G(V, E) with non-negative edge weights, starting node s
+        Output: Shortest path distances from s to all other nodes
+        
+        1. For each node v in V:
+            - Set distance[v] = ∞
+        2. Set distance[s] = 0
+        3. Create a priority queue Q and insert (0, s)
+        
+        4. While Q is not empty:
+            a. Pop (d, u) from Q
+            b. If d > distance[u], continue
+            c. For each neighbor v of u with edge weight w:
+                i. If distance[v] > distance[u] + w:
+                    - Set distance[v] = distance[u] + w
+                    - Insert (distance[v], v) into Q
+    \end{comment}
+
+    \begin{comment}
+        Dijkstra(G, start):
+          for each node v in G:
+            distance[v] = ∞
+          distance[start] = 0
+          Q = priority queue with (start, 0)
+        
+          while Q is not empty:
+            (u, d) = Q.pop()
+            for each neighbor v of u with weight w:
+              if distance[v] > distance[u] + w:
+                distance[v] = distance[u] + w
+                Q.push((v, distance[v]))
+    \end{comment}   
+
+    \begin{frame}{Dijkstra's algorithm}        
+        \begin{algorithm}[H]
+            \scriptsize
+    
+            % \footnotesize
+            \DontPrintSemicolon
+            % \SetAlgoLined
+            % \SetNoline
+            
+            \SetKwInOut{Input}{Input}
+            \SetKwInOut{Output}{Output}
+            
+            \Input{$G$, $s$ \Comment*[r]{Graph $G$ and a source node $s$}}
+            \Output{Finds shortest paths from a source node $s$ to all other nodes}
+            
+            % \BlankLine
+            $Q \gets \varnothing$ \Comment*[r]{Create an empty priority queue}
+            $D \gets \varnothing$ \Comment*[r]{Create an empty array of distances}
+            
+            \ForEach{$v \in G$}{
+                $D[v] \gets \infty$\; % \Comment*[r]{Array of distances}
+            }
+            $D[s] \gets 0$\;
+            $enqueue(Q, s, 0)$\;
+
+            \While{$Q \neq \varnothing$}{
+                $u, w_{min} \gets dequeue(Q)$\;
+                \ForEach{$v \in N(u)$ with weight $w$} {
+                    \If{$D[v] > D[u] + w$}{
+                        $D[v] = D[u] + w$\;
+                        $enqueue(Q, v, D[v])$\;
+                    }
+                }
+            }
+            % \Return max\;
+            \caption{Dijkstra.}
+            \label{tab:algorithm_dijkstra}
+        \end{algorithm}
+
+        % Dijkstra(G, start):
+        %   for each node v in G:
+        %     distance[v] = ∞
+        %   distance[start] = 0
+        %   Q = priority queue with (start, 0)
+        
+        %   while Q is not empty:
+        %     (u, d) = Q.pop()
+        %     for each neighbor v of u with weight w:
+        %       if distance[v] > distance[u] + w:
+        %         distance[v] = distance[u] + w
+        %         Q.push((v, distance[v]))
+        
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+
+    \begin{frame}{Dijkstra's algorithm example}
+        \begin{columns}[t] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment            
+            \begin{column}{0.3\textwidth}
+                \begin{figure}[ht!]
+                    \centering
+                    \includegraphics[width=0.9\linewidth]{pic/graph_example_weighted.pdf}
+                    \caption{Example of Dijkstra's algorithm.}
+                    % \caption*{Adapted from \cite{labonne2023hands}.}
+                    \label{fig:graph_examples_dijkstra}
+                \end{figure}
+            \end{column}
+
+             \begin{column}{0.7\textwidth}
+                \begin{table}
+                    \scriptsize
+                    \centering
+                    \begin{tabular}{|l|l|l|p{2cm}|}
+                    \hline
+                     Nodes & Distances & Previous  & Paths \\ \hline
+                     &  &  &  \\ \hline
+                     &  &  &  \\ \hline
+                     &  &  &  \\ \hline
+                     &  &  &  \\ \hline
+                    \end{tabular}
+                    % \caption{Caption}
+                    % \label{tab:my_label}
+                \end{table}
+
+                \begin{itemize}
+                    \item $Q:$
+                    \item $u:$
+                    \item $N(u):$
+                \end{itemize}
+            \end{column}
+        \end{columns}
+        
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+
+    \begin{frame}{Applications of Dijkstra's algorithm}
+        \begin{itemize}
+            \item GPS navigation and maps.
+            \item Route planning in transportation networks.
+            \item Network traffic optimization.
+            \item Internet routing protocols.
+        \end{itemize}
+        
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+
+\section{Practical Application}
+    \begin{frame}{Implementations}
+        \begin{itemize}
+            \item Install requirements
+                \begin{itemize}
+                    \item Python
+                    \item NetworkX
+                    \item Matplotlib
+                \end{itemize}
+            \item Network traversal
+            \item Shortest path algorithm
+        \end{itemize}
+        
+        Google colab: \url{https://colab.research.google.com/drive/19THW8Zqf2PcL9ny7SPJk6W4Kyd0E6lnT?usp=sharing}.
+        
+        \begin{note}
+            {Write your notes here}
+        \end{note}
+    \end{frame}
+
+\section{Planned Activity}
+    \begin{frame}{Assignment for the next session}
+        \begin{itemize}
+            \item Research about measurements of networks
+            % \item Read the paper: \texttt{DeepTrax}: Embedding Graphs of Financial Transactions
+        \end{itemize}
+        
+        \begin{note}
+            {Write your notes here}
+        \end{note}
+    \end{frame}
+
+\section*{References}
+    \begin{frame}
+        \begin{center}
+            {\Huge\textit{Thank you for your attention!}}\\
+            $\infty$ \\
+            % edwin.alvarez@pucp.edu.pe\\
+            \url{https://github.com/win7}
+        \end{center}
+    \end{frame}
+    
+    %========================
+    % bibliography
+    %========================
+    % \input{ref.bib}
+    \begin{frame}[allowframebreaks]
+        \scriptsize % use this command to resiz
+        \bibliography{ref}
+        \bibliographystyle{unsrt}
+        % \bibliographystyle{alpha}
+    \end{frame}
+
+\end{document}

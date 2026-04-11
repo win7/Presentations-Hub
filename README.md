@@ -1,4 +1,4 @@
-# Introduction Network Analytics
+# Presentations-Hub
 
 Based on YTU-Beamer-Theme.
 
@@ -22,6 +22,7 @@ LaTex Workshop
 
 ### Compile: 
 ```
+biber slide
 xelatex slide.tex
 ```
 

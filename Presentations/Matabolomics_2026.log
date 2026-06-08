@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2026/dev/Arch Linux) (preloaded format=xelatex 2026.4.6)  17 MAY 2026 23:09
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2026/dev/Arch Linux) (preloaded format=xelatex 2026.4.6)  7 JUN 2026 18:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1280,7 +1280,32 @@ Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 \everycr=\toks73
 \minrowclearance=\skip97
 \rownum=\count494
-) (./JNU.sty (/usr/share/texmf-dist/tex/latex/beamer/beamerouterthemesmoothbars.sty) (/usr/share/texmf-dist/tex/latex/beamer/beamerinnerthemecircles.sty)) (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+)
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 48.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@@underline' on input line 48.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 48.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 48.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 48.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 48.
+
+(./JNU.sty (/usr/share/texmf-dist/tex/latex/beamer/beamerouterthemesmoothbars.sty) (/usr/share/texmf-dist/tex/latex/beamer/beamerinnerthemecircles.sty)) (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2025/11/14 1.11b listings language file
 ) (/usr/share/texmf-dist/tex/latex/listings/lstlang2.sty
 File: lstlang2.sty 2025/11/14 1.11b listings language file
@@ -1534,27 +1559,8 @@ LaTeX Info: Command `\ddddot' is already robust on input line 94.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
  (./Matabolomics_2026.nav)
-Overfull \hbox (65.93733pt too wide) in paragraph at lines 94--94
- [][]  
- []
-
-
-Overfull \hbox (51.25708pt too wide) in paragraph at lines 94--94
- [][][][]  
- []
-
-
-Overfull \hbox (65.93733pt too wide) in paragraph at lines 103--103
- [][]  
- []
-
-
-Overfull \hbox (51.25708pt too wide) in paragraph at lines 103--103
- [][][][]  
- []
-
 LaTeX Font Info:    Trying to load font information for OT1+minntx on input line 103.
-(/usr/share/texmf-dist/tex/latex/newtx/ot1minntx.fd
+ (/usr/share/texmf-dist/tex/latex/newtx/ot1minntx.fd
 File: ot1minntx.fd 2023/09/09 v1.1 font definition file for OT1/minntx
 )
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
@@ -1648,580 +1654,354 @@ LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/it' will be
 File: ../images/pucp.png Graphic file (type bmp)
 <../images/pucp.png>
 
-Overfull \vbox (11.12773pt too high) detected at line 103
- []
-
-
-Overfull \hbox (65.93733pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (51.25708pt too wide) has occurred while \output is active
- [][][][]  
+Overfull \vbox (22.60344pt too high) detected at line 103
  []
 
 [1
 
-]
-Overfull \hbox (65.93733pt too wide) in paragraph at lines 108--108
- [][]  
- []
+] (./Matabolomics_2026.toc) [2
 
-
-Overfull \hbox (51.25708pt too wide) in paragraph at lines 108--108
- [][][][]  
- []
-
-(./Matabolomics_2026.toc)
-Overfull \hbox (65.93733pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (51.25708pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[2
+] (./Matabolomics_2026.toc) [3
 
 ]
-Overfull \hbox (65.93733pt too wide) in paragraph at lines 110--110
- [][]  
- []
-
-
-Overfull \hbox (51.25708pt too wide) in paragraph at lines 110--110
- [][][][]  
- []
-
-(./Matabolomics_2026.toc)
-Overfull \hbox (65.93733pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (51.25708pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[3
-
-]
-Overfull \hbox (65.93733pt too wide) in paragraph at lines 131--131
- [][]  
- []
-
-
-Overfull \hbox (51.25708pt too wide) in paragraph at lines 131--131
- [][][][]  
- []
-
-File: ../images/graph_alignment_problem.png Graphic file (type bmp)
-<../images/graph_alignment_problem.png>
+File: ../images/ms_spectrum.png Graphic file (type bmp)
+<../images/ms_spectrum.png>
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 6.5pt on input line 131.
+(Font)              scaled to size 6.5pt on input line 139.
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 5.5pt on input line 131.
+(Font)              scaled to size 5.5pt on input line 139.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 6.5pt on input line 131.
+(Font)              scaled to size 6.5pt on input line 139.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 5.5pt on input line 131.
+(Font)              scaled to size 5.5pt on input line 139.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 6.5pt on input line 131.
+(Font)              scaled to size 6.5pt on input line 139.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 5.5pt on input line 131.
+(Font)              scaled to size 5.5pt on input line 139.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 6.5pt on input line 131.
+(Font)              scaled to size 6.5pt on input line 139.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 5.5pt on input line 131.
+(Font)              scaled to size 5.5pt on input line 139.
+
 
 LaTeX Font Warning: Font shape `U/lasy/m/n' in size <6.5> not available
-(Font)              size <6> substituted on input line 131.
+(Font)              size <6> substituted on input line 139.
 
 
 LaTeX Font Warning: Font shape `U/lasy/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 131.
+(Font)              size <5> substituted on input line 139.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <6.5> not available
-(Font)              size <6> substituted on input line 131.
+(Font)              size <6> substituted on input line 139.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 131.
+(Font)              size <5> substituted on input line 139.
 
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 6.5pt on input line 131.
+(Font)              scaled to size 6.5pt on input line 139.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 5.5pt on input line 131.
+(Font)              scaled to size 5.5pt on input line 139.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 6.5pt on input line 131.
+(Font)              scaled to size 6.5pt on input line 139.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 5.5pt on input line 131.
+(Font)              scaled to size 5.5pt on input line 139.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 6.5pt on input line 131.
+(Font)              scaled to size 6.5pt on input line 139.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 5.5pt on input line 131.
+(Font)              scaled to size 5.5pt on input line 139.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 6.5pt on input line 131.
+(Font)              scaled to size 6.5pt on input line 139.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 5.5pt on input line 131.
+(Font)              scaled to size 5.5pt on input line 139.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 6.5pt on input line 131.
+(Font)              scaled to size 6.5pt on input line 139.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 5.5pt on input line 131.
+(Font)              scaled to size 5.5pt on input line 139.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/it' will be
-(Font)              scaled to size 6.5pt on input line 131.
+(Font)              scaled to size 6.5pt on input line 139.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/it' will be
-(Font)              scaled to size 5.5pt on input line 131.
-
-Overfull \hbox (65.93733pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (51.25708pt too wide) has occurred while \output is active
- [][][][]  
- []
-
+(Font)              scaled to size 5.5pt on input line 139.
 [4
 
 ]
-Overfull \hbox (65.93733pt too wide) in paragraph at lines 149--149
- [][]  
- []
+File: ../images/untargeted_data.pdf Graphic file (type pdf)
+<use ../images/untargeted_data.pdf>
 
 
-Overfull \hbox (51.25708pt too wide) in paragraph at lines 149--149
- [][][][]  
- []
-
-File: ../images/raw_data.pdf Graphic file (type pdf)
-<use ../images/raw_data.pdf>
-
-Overfull \hbox (65.93733pt too wide) has occurred while \output is active
- [][]  
- []
+LaTeX Warning: Citation `sindelar2020chemical' on page 5 undefined on input line 164.
 
 
-Overfull \hbox (51.25708pt too wide) has occurred while \output is active
- [][][][]  
+Overfull \vbox (5.1048pt too high) detected at line 164
  []
 
 [5
 
 ]
-Overfull \hbox (65.93733pt too wide) in paragraph at lines 171--171
- [][]  
- []
+File: ../images/metabolomics_workflow.png Graphic file (type bmp)
+<../images/metabolomics_workflow.png>
 
 
-Overfull \hbox (51.25708pt too wide) in paragraph at lines 171--171
- [][][][]  
- []
-
-File: ../images/T-GAE.jpg Graphic file (type bmp)
-<../images/T-GAE.jpg>
-
-Overfull \hbox (65.93733pt too wide) has occurred while \output is active
- [][]  
- []
+LaTeX Warning: Citation `putri2014mass' on page 6 undefined on input line 184.
 
 
-Overfull \hbox (51.25708pt too wide) has occurred while \output is active
- [][][][]  
+Overfull \vbox (5.8027pt too high) detected at line 184
  []
 
 [6
 
-]
-Overfull \hbox (65.93733pt too wide) in paragraph at lines 173--173
- [][]  
- []
+] [7
 
-
-Overfull \hbox (51.25708pt too wide) in paragraph at lines 173--173
- [][][][]  
- []
-
-(./Matabolomics_2026.toc)
-Overfull \hbox (65.93733pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (51.25708pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[7
+] (./Matabolomics_2026.toc) [8
 
 ]
-Overfull \hbox (65.93733pt too wide) in paragraph at lines 190--190
- [][]  
- []
+File: ../images/mass_spectrum.png Graphic file (type bmp)
+<../images/mass_spectrum.png>
 
 
-Overfull \hbox (51.25708pt too wide) in paragraph at lines 190--190
- [][][][]  
- []
-
-File: ../images/Method_NA.pdf Graphic file (type pdf)
-<use ../images/Method_NA.pdf>
-
-Overfull \hbox (65.93733pt too wide) has occurred while \output is active
- [][]  
- []
+LaTeX Warning: Citation `smoluch2019mass' on page 9 undefined on input line 219.
 
 
-Overfull \hbox (51.25708pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[8
-
-]
-Overfull \hbox (65.93733pt too wide) in paragraph at lines 192--192
- [][]  
- []
-
-
-Overfull \hbox (51.25708pt too wide) in paragraph at lines 192--192
- [][][][]  
- []
-
-(./Matabolomics_2026.toc)
-Overfull \hbox (65.93733pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (51.25708pt too wide) has occurred while \output is active
- [][][][]  
+Overfull \vbox (15.33807pt too high) detected at line 219
  []
 
 [9
 
 ]
-Overfull \hbox (65.93733pt too wide) in paragraph at lines 194--194
- [][]  
- []
-
-
-Overfull \hbox (51.25708pt too wide) in paragraph at lines 194--194
- [][][][]  
- []
-
-(./Matabolomics_2026.toc)
-Overfull \hbox (65.93733pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (51.25708pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[10
+File: ../images/raw_data.pdf Graphic file (type pdf)
+<use ../images/raw_data.pdf>
+ [10
 
 ]
-Overfull \hbox (65.93733pt too wide) in paragraph at lines 217--217
- [][]  
- []
-
-
-Overfull \hbox (51.25708pt too wide) in paragraph at lines 217--217
- [][][][]  
- []
-
 LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 217.
-
-Overfull \hbox (65.93733pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (51.25708pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[11
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 278.
+File: ../images/graph_example.pdf Graphic file (type pdf)
+<use ../images/graph_example.pdf>
+File: ../images/graph_adjacency_matrix.pdf Graphic file (type pdf)
+<use ../images/graph_adjacency_matrix.pdf>
+File: ../images/graph_adjacency_list.pdf Graphic file (type pdf)
+<use ../images/graph_adjacency_list.pdf>
+File: ../images/graph_list_edge.pdf Graphic file (type pdf)
+<use ../images/graph_list_edge.pdf>
+ [11
 
 ]
-Overfull \hbox (65.93733pt too wide) in paragraph at lines 235--235
- [][]  
- []
-
-
-Overfull \hbox (51.25708pt too wide) in paragraph at lines 235--235
- [][][][]  
- []
-
-File: ../images/secoSanMartin.png Graphic file (type bmp)
-<../images/secoSanMartin.png>
-LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <9> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 235.
-
-Overfull \hbox (65.93733pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (51.25708pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[12
+File: ../images/graph_neural_networks.pdf Graphic file (type pdf)
+<use ../images/graph_neural_networks.pdf>
+ [12
 
 ]
-Overfull \hbox (65.93733pt too wide) in paragraph at lines 296--296
- [][]  
- []
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
+(Font)              scaled to size 10.95pt on input line 328.
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
+(Font)              scaled to size 8.0pt on input line 328.
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
+(Font)              scaled to size 6.1pt on input line 328.
+File: ../images/graph_alignment_problem.png Graphic file (type bmp)
+<../images/graph_alignment_problem.png>
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
+(Font)              scaled to size 6.5pt on input line 328.
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
+(Font)              scaled to size 5.5pt on input line 328.
 
-
-Overfull \hbox (51.25708pt too wide) in paragraph at lines 296--296
- [][][][]  
- []
-
-LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 6.0pt on input line 296.
-LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 6.0pt on input line 296.
-LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 6.0pt on input line 296.
-LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 6.0pt on input line 296.
-LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 6.0pt on input line 296.
-LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 6.0pt on input line 296.
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 6.0pt on input line 296.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 6.0pt on input line 296.
-LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 296.
-LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/it' will be
-(Font)              scaled to size 6.0pt on input line 296.
-
-Overfull \hbox (65.93733pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (51.25708pt too wide) has occurred while \output is active
- [][][][]  
+Overfull \vbox (6.81775pt too high) detected at line 328
  []
 
 [13
 
 ]
-Overfull \hbox (65.93733pt too wide) in paragraph at lines 298--298
- [][]  
- []
+File: ../images/T-GAE.jpg Graphic file (type bmp)
+<../images/T-GAE.jpg>
+ [14
 
-
-Overfull \hbox (51.25708pt too wide) in paragraph at lines 298--298
- [][][][]  
- []
-
-(./Matabolomics_2026.toc)
-Overfull \hbox (65.93733pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (51.25708pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[14
+] (./Matabolomics_2026.toc) [15
 
 ]
-Overfull \hbox (65.93733pt too wide) in paragraph at lines 300--300
- [][]  
- []
+File: ../images/Method_NA.pdf Graphic file (type pdf)
+<use ../images/Method_NA.pdf>
+ [16
 
+] [17
 
-Overfull \hbox (51.25708pt too wide) in paragraph at lines 300--300
- [][][][]  
- []
+] (./Matabolomics_2026.toc) [18
 
-(./Matabolomics_2026.toc)
-Overfull \hbox (65.93733pt too wide) has occurred while \output is active
- [][]  
- []
+] [19
 
+] [20
 
-Overfull \hbox (51.25708pt too wide) has occurred while \output is active
- [][][][]  
- []
+] (./Matabolomics_2026.toc) [21
 
-[15
+] [22
 
 ]
-Overfull \hbox (65.93733pt too wide) in paragraph at lines 311--311
- [][]  
- []
+File: ../images/secoSanMartin.png Graphic file (type bmp)
+<../images/secoSanMartin.png>
+LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <9> not available
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 470.
+ [23
 
+]
+LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
+(Font)              scaled to size 6.0pt on input line 531.
+LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
+(Font)              scaled to size 6.0pt on input line 531.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 6.0pt on input line 531.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 6.0pt on input line 531.
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
+(Font)              scaled to size 6.0pt on input line 531.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 6.0pt on input line 531.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 6.0pt on input line 531.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 6.0pt on input line 531.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 6.0pt on input line 531.
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
+(Font)              scaled to size 6.0pt on input line 531.
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/it' will be
+(Font)              scaled to size 6.0pt on input line 531.
+ [24
 
-Overfull \hbox (51.25708pt too wide) in paragraph at lines 311--311
- [][][][]  
- []
+] (./Matabolomics_2026.toc) [25
 
+]
 LaTeX Font Info:    Font shape `T1/calligra/m/n' will be
-(Font)              scaled to size 35.82726pt on input line 311.
+(Font)              scaled to size 35.82726pt on input line 546.
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 24.88pt on input line 311.
+(Font)              scaled to size 24.88pt on input line 546.
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 18.2pt on input line 311.
+(Font)              scaled to size 18.2pt on input line 546.
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 13.7pt on input line 311.
+(Font)              scaled to size 13.7pt on input line 546.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 24.88pt on input line 311.
+(Font)              scaled to size 24.88pt on input line 546.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 18.2pt on input line 311.
+(Font)              scaled to size 18.2pt on input line 546.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 13.7pt on input line 311.
+(Font)              scaled to size 13.7pt on input line 546.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 24.88pt on input line 311.
+(Font)              scaled to size 24.88pt on input line 546.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 18.2pt on input line 311.
+(Font)              scaled to size 18.2pt on input line 546.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 13.7pt on input line 311.
+(Font)              scaled to size 13.7pt on input line 546.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 24.88pt on input line 311.
+(Font)              scaled to size 24.88pt on input line 546.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 18.2pt on input line 311.
+(Font)              scaled to size 18.2pt on input line 546.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 13.7pt on input line 311.
+(Font)              scaled to size 13.7pt on input line 546.
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
+(Font)              scaled to size 24.88pt on input line 546.
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
+(Font)              scaled to size 18.2pt on input line 546.
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
+(Font)              scaled to size 13.7pt on input line 546.
+
 
 LaTeX Font Warning: Font shape `U/lasy/m/n' in size <18.2> not available
-(Font)              size <17.28> substituted on input line 311.
+(Font)              size <17.28> substituted on input line 546.
 
 
 LaTeX Font Warning: Font shape `U/lasy/m/n' in size <13.7> not available
-(Font)              size <14.4> substituted on input line 311.
+(Font)              size <14.4> substituted on input line 546.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <18.2> not available
-(Font)              size <17.28> substituted on input line 311.
+(Font)              size <17.28> substituted on input line 546.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <13.7> not available
-(Font)              size <14.4> substituted on input line 311.
+(Font)              size <14.4> substituted on input line 546.
 
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 24.88pt on input line 311.
+(Font)              scaled to size 24.88pt on input line 546.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 18.2pt on input line 311.
+(Font)              scaled to size 18.2pt on input line 546.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 13.7pt on input line 311.
+(Font)              scaled to size 13.7pt on input line 546.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 24.88pt on input line 311.
+(Font)              scaled to size 24.88pt on input line 546.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 18.2pt on input line 311.
+(Font)              scaled to size 18.2pt on input line 546.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 13.7pt on input line 311.
+(Font)              scaled to size 13.7pt on input line 546.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 24.88pt on input line 311.
+(Font)              scaled to size 24.88pt on input line 546.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 18.2pt on input line 311.
+(Font)              scaled to size 18.2pt on input line 546.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 13.7pt on input line 311.
+(Font)              scaled to size 13.7pt on input line 546.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 24.88pt on input line 311.
+(Font)              scaled to size 24.88pt on input line 546.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 18.2pt on input line 311.
+(Font)              scaled to size 18.2pt on input line 546.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 13.7pt on input line 311.
+(Font)              scaled to size 13.7pt on input line 546.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 24.88pt on input line 311.
+(Font)              scaled to size 24.88pt on input line 546.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 18.2pt on input line 311.
+(Font)              scaled to size 18.2pt on input line 546.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 13.7pt on input line 311.
+(Font)              scaled to size 13.7pt on input line 546.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/it' will be
-(Font)              scaled to size 24.88pt on input line 311.
+(Font)              scaled to size 24.88pt on input line 546.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/it' will be
-(Font)              scaled to size 18.2pt on input line 311.
+(Font)              scaled to size 18.2pt on input line 546.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/it' will be
-(Font)              scaled to size 13.7pt on input line 311.
-
-Overfull \hbox (65.93733pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (51.25708pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[16
+(Font)              scaled to size 13.7pt on input line 546.
+[26
 
 ]
-Overfull \hbox (65.93733pt too wide) in paragraph at lines 331--331
- [][]  
- []
-
-
-Overfull \hbox (51.25708pt too wide) in paragraph at lines 331--331
- [][][][]  
- []
-
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 9.0pt on input line 331.
+(Font)              scaled to size 9.0pt on input line 566.
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 6.6pt on input line 331.
+(Font)              scaled to size 6.6pt on input line 566.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 9.0pt on input line 331.
+(Font)              scaled to size 9.0pt on input line 566.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 6.6pt on input line 331.
+(Font)              scaled to size 6.6pt on input line 566.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 9.0pt on input line 331.
+(Font)              scaled to size 9.0pt on input line 566.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 6.6pt on input line 331.
+(Font)              scaled to size 6.6pt on input line 566.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 9.0pt on input line 331.
+(Font)              scaled to size 9.0pt on input line 566.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 6.6pt on input line 331.
+(Font)              scaled to size 6.6pt on input line 566.
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
+(Font)              scaled to size 9.0pt on input line 566.
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
+(Font)              scaled to size 6.6pt on input line 566.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 9.0pt on input line 331.
+(Font)              scaled to size 9.0pt on input line 566.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 6.6pt on input line 331.
+(Font)              scaled to size 6.6pt on input line 566.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 9.0pt on input line 331.
+(Font)              scaled to size 9.0pt on input line 566.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 6.6pt on input line 331.
+(Font)              scaled to size 6.6pt on input line 566.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 9.0pt on input line 331.
+(Font)              scaled to size 9.0pt on input line 566.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 6.6pt on input line 331.
+(Font)              scaled to size 6.6pt on input line 566.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 9.0pt on input line 331.
+(Font)              scaled to size 9.0pt on input line 566.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 6.6pt on input line 331.
+(Font)              scaled to size 6.6pt on input line 566.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 331.
+(Font)              scaled to size 9.0pt on input line 566.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 6.6pt on input line 331.
+(Font)              scaled to size 6.6pt on input line 566.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/it' will be
-(Font)              scaled to size 9.0pt on input line 331.
+(Font)              scaled to size 9.0pt on input line 566.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/it' will be
-(Font)              scaled to size 6.6pt on input line 331.
-
-Overfull \hbox (65.93733pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (51.25708pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[17
+(Font)              scaled to size 6.6pt on input line 566.
+ [27
 
 ]
 \tf@nav=\write7
@@ -2243,16 +2023,19 @@ L3 programming layer <2020/03/25>
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.92pt have occurred.
 
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `Matabolomics_2026.out' has not changed.
-(rerunfilecheck)             Checksum: C0AD8FFB2BDDFDDFCF3D04A2FF9BFF01;656.
+(rerunfilecheck)             Checksum: 898092CBE3EF3319EE811B51BCE7C199;636.
  ) 
 Here is how much of TeX's memory you used:
- 49137 strings out of 470190
- 1062838 string characters out of 5479683
- 1755427 words of memory out of 5000000
- 76761 multiletter control sequences out of 15000+600000
- 681862 words of font info for 220 fonts, out of 8000000 for 9000
+ 49304 strings out of 470190
+ 1068434 string characters out of 5479683
+ 1760406 words of memory out of 5000000
+ 76905 multiletter control sequences out of 15000+600000
+ 681974 words of font info for 234 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  128i,20n,131p,1682b,975s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Matabolomics_2026.pdf (17 pages).
+Output written on Matabolomics_2026.pdf (27 pages).

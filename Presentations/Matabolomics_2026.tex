@@ -45,10 +45,10 @@
 \newcommand{\alertplain}[1]{{\color{swufe}#1}}
 
 % Title page setup
-\author{Edwin A.M. \inst{1}, Deybis Paucar Pinto \inst{1}, Alfredo J. Ibañez \inst{1}, Madina Mansurova \inst{1}}
+\author[Alvarez-Mamani et al.]{\underline{Edwin Alvarez-Mamani} \inst{1}, Deybis Paucar Pinto \inst{1}, Alfredo J. Ibañez \inst{1}, Madina Mansurova \inst{1}}
 % \author[Topics]{Topics}
 
-\title[Aligning Metabolomic Networks via Graph Learning for Common Subnetwork Discovery]{Aligning Metabolomic Networks via Graph Learning for Common Subnetwork Discovery}
+\title[Aligning Metabolomic Networks via Graph Learning...]{Aligning Metabolomic Networks via Graph Learning for Common Subnetwork Discovery}
 % Custom title template with a styled box
 \setbeamertemplate{title}{
     \makebox[\textwidth]{ % force horizontal centering
@@ -66,8 +66,8 @@
 }
 
 % \subtitle{Jiangnan University Academic Report Beamer Template}
-%% \institute[JNU]{\normalsize{\inst{1} School of Business \quad Jiangnan University \quad \textit{****@qq.com}}}
-\institute[ICOBA-PUCP]{
+% \institute[JNU]{\normalsize{\inst{1} School of Business \quad Jiangnan University \quad \textit{****@qq.com}}}
+\institute[ICOBA-PUCP, UNSAAC]{
     \includegraphics[width=0.15\linewidth]{../images/pucp.png}
 }
 
@@ -107,11 +107,18 @@
     % \tableofcontents[sectionstyle=show,subsectionstyle=hide,subsubsectionstyle=hide]
 \end{frame}
 
-\section{Introduction}
-    \begin{frame}{Problem definition}
-        Let two graphs be defined as $G_1 = (V_1, E_1)$, $G_2 = (V_2, E_2)$. %, where $V_1$ and $V_2$ denote the sets of nodes, and $E_1$ and $E_2$ denote the sets of edges.
+% Timing: Your total presentation length is 15 minutes, broken down as:  
+% - 10-12 minutes of talking/presenting 
+% - 2-4 minutes of Q&A with the audience 
+% - 1 minute to transition to the next speaker 
 
-        The node alignment problem consists of finding a mapping $\pi: V_1 \to V_2$, such that each node $v \in V_1$ is assigned to a corresponding node $\pi(v) \in V_2$. %, maximizing a similarity criterion that captures structural and/or semantic correspondence between the two graphs.
+\section{Introduction}
+    % Motivation and research gap
+    % Problem formulation
+    % Research question
+
+    \begin{frame}{Motivation}
+        Mass spectrometry is an analytical technique that is used to identify and quantify chemical compounds in a sample.
 
         \begin{figure}[htp!]
             \centering
@@ -119,9 +126,90 @@
                 width=0.45\linewidth,
                 trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
                 clip
-            ]{../images/graph_alignment_problem.png}
-            \caption{Node alignment.}
-            \source{\url{https://link.springer.com/rwe/10.1007/978-1-4419-9863-7_992}}
+            ]{../images/ms_spectrum.png}
+            \caption{Overall scheme of a mass spectrometer and formation of a mass spectrum.}
+            \source{\url{https://sisu.ut.ee/heritage-analysis/52-mass-spectrometry}} 
+            % \cite{putri2014mass}
+            % \label{fig:my_image}
+        \end{figure}
+
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+
+    \begin{frame}{Problem formulation}
+        % Targeted and untargeted analyses
+        The mass spectrometry analysis includes two approach: % targeted analysis and untargeted analysis.
+        \begin{itemize}
+            \item \alert{Targeted approach:} the molecule of interest or m/z values (for MS and MS/MS) are predefined for quantitation of analytes present in a complex samples matrix. %, with high sensitivity, accuracy, and specificity
+            \item \alert{Untargeted approach:} is the analysis to identify the unknowns in a sample, using parent ion and product or fragment ion analysis (MS/MS).
+        \end{itemize}
+
+        \begin{figure}[htp!]
+            \centering
+            \includegraphics[
+                width=0.46\linewidth,
+                trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
+                clip
+            ]{../images/untargeted_data.pdf}
+            \caption{Composition of an untargeted metabolomic data.}
+            \source{Adapted from \cite{sindelar2020chemical}}
+            % \label{fig:my_image}
+        \end{figure}
+
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+
+    \begin{frame}{Untargeted mass spectrometry workflow}
+        A data matrix (sample vs. metabolites) acquired from a mass spectrometry-based metabolomics study includes not only biological information but also technical noise. % There are several techniques for univariate or multivariate statistical analysis. Some statistical methods used are: Principal component analysis (PCA), Hierarchical cluster analysis (HCA), Correlation analysis (CA), Projection to latent structure regression (PLS-R), Projection to latent structure discriminant analysis (PLS-DA), and t-Test. It is very important to use and interpret the statistical result accurate \cite{putri2014mass}.
+
+        \begin{figure}[htp!]
+            \centering
+            \includegraphics[
+                width=0.7\linewidth,
+                trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
+                clip
+            ]{../images/metabolomics_workflow.png}
+            \caption{Metabolomics workflow.}
+            \source{\cite{putri2014mass}} 
+            % \label{fig:my_image}
+        \end{figure}
+
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+
+    \begin{frame}{Our objectives}
+        Aligning metabolomic metworks for filter MS data.
+
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+
+\section{Background}
+    % Metabolomics: GC-MS and LC-MS data
+    % Graph representation: G=(V,E,X)G = (V, E, X)
+    % G=(V,E,X)
+    % Message passing in GNNs
+    % GCN and GAT: key equations
+
+    \begin{frame}{Mass spectrometry (MS)}
+        Mass spectrometry (MS) is a microanalytical technique used to detect and determine the amount of an analyte, it is also used to determine the elemental composition and some aspects of the molecular structure of an analyte. % \cite{watson2007introduction}
+
+        \begin{figure}[htp!]
+            \centering
+            \includegraphics[
+                width=0.8\linewidth,
+                trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
+                clip
+            ]{../images/mass_spectrum.png}
+            \caption{Mass spectrum of caffeine obtained by electrospray ionization mass spectrometry (ESI‐MS) technique.}
+            \source{\cite{smoluch2019mass}.}
             % \label{fig:my_image}
         \end{figure}
 
@@ -148,6 +236,97 @@
         \end{note}
     \end{frame}
 
+    \begin{frame}{Graph}
+        A graph (network) is defined as $G = (V, E)$, where $V = \{v_1, v_2, ..., v_{n}\}$ is the nodes (or \textit{vertices}, or \textit{points}) set and $E = \{e_1, e_2, ..., e_{m}\}, e_i \in V \times V$ a set of edges (or \textit{lines}, or \textit{arcs}) formed by unordered pairs of nodes. \\
+
+        % \vspace{2mm}
+        % \scriptsize Number of nodes is denoted $|V|$. \\
+        % Number of edges is denoted $|E|$.
+
+        \begin{figure}
+            \centering
+            \begin{subfigure}{0.2\textwidth}
+                \includegraphics[width=\textwidth]{../images/graph_example.pdf}
+                \caption{Input graph.}
+                \label{fig:graph_example_}
+            \end{subfigure}
+            \hfill
+            \begin{subfigure}{0.22\textwidth}
+                \includegraphics[width=\textwidth]{../images/graph_adjacency_matrix.pdf}
+                \caption{Adjacency matrix.}
+                \label{fig:graph_adjacency_matrix_}
+            \end{subfigure}
+            \hfill
+            \begin{subfigure}{0.22\textwidth}
+                \includegraphics[width=\textwidth]{../images/graph_adjacency_list.pdf}
+                \caption{Adjacency list.}
+                \label{fig:graph_adjacency_list_}
+            \end{subfigure}
+            \hfill
+            \begin{subfigure}{0.22\textwidth}
+                \includegraphics[width=\textwidth]{../images/graph_list_edge.pdf}
+                \caption{Edge list.}
+                \label{fig:graph_list_edge_}
+            \end{subfigure}
+            \caption{Graph representations.}
+            \label{fig:graph_representation_}
+        \end{figure}
+
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+
+    \begin{frame}{Graph Neural Network (GNN)}
+        It is a function $f: (A, X) \rightarrow Z$ that maps each node $v \in V$ of a graph $G = (V, E)$ to a low-dimensional embedding $z_v \in \mathbb{R}^{d}$ ($d \ll |V|$). \\
+        
+        % Here $A \in \mathbb{R}^{|V| \times |V|}$ is the adjacency matrix, $X \in \mathbb{R}^{|V| \times C}$ is the node feature matrix, $C$ denotes the feature dimensionality, and $Z = H^{(L)} \in \mathbb{R}^{|V| \times d}$ is the final embedding matrix obtained after $L$ layers, with $H^{(0)} = X$.
+        
+        \begin{figure}[htp!]
+            \centering
+            \includegraphics[
+                width=0.8\linewidth,
+                trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
+                clip
+            ]{../images/graph_neural_networks.pdf}
+            \caption{GNNs scheme.}
+            % \source{}
+            % \label{fig:my_image}
+        \end{figure}
+
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+
+    \begin{frame}{Graph aligment problem}
+        % Let two graphs $G_1 = (V_1, E_1)$, $G_2 = (V_2, E_2)$. %, where $V_1$ and $V_2$ denote the sets of nodes, and $E_1$ and $E_2$ denote the sets of edges.
+
+        % The graph alignment problem consists of finding a mapping $\pi: V_1 \to V_2$, such that each node $v \in V_1$ is assigned to a corresponding node $\pi(v) \in V_2$. %, maximizing a similarity criterion that captures structural and/or semantic correspondence between the two graphs.
+
+        % Let $G_1 = (V_1, E_1)$ and $G_2 = (V_2, E_2)$ be two graphs. The node alignment problem aims to identify a correspondence between the node sets of two graphs through a mapping function:
+
+        % Let $G_1 = (V_1, E_1)$ and $G_2 = (V_2, E_2)$ be two graphs. The goal is to identify a correspondence between the nodes in $V_1$ and those in $V_2$ through a mapping function:
+
+        Let $G_1 = (V_1, E_1)$ and $G_2 = (V_2, E_2)$ be two graphs. The goal is to align their nodes through a mapping function $\mathbf{\pi : V_1 \rightarrow V_2}$, where each node $v \in V_1$ is mapped to its corresponding node $\pi(v) \in V_2$.
+
+        \begin{figure}[htp!]
+            \centering
+            \includegraphics[
+                width=0.5\linewidth,
+                trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
+                clip
+            ]{../images/graph_alignment_problem.png}
+            \caption{Node alignment.}
+            \source{\url{https://link.springer.com/rwe/10.1007/978-1-4419-9863-7_992}}
+            % \label{fig:my_image}
+        \end{figure}
+
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+
     \begin{frame}{Base GNN model}
         \texttt{T-GAE}: Transferable Graph Autoencoder for Network Alignment.
 
@@ -156,7 +335,7 @@
         \begin{figure}[htp!]
             \centering
             \includegraphics[
-                width=0.8\linewidth,
+                width=0.9\linewidth,
                 trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
                 clip
             ]{../images/T-GAE.jpg}
@@ -170,8 +349,12 @@
         \end{note}
     \end{frame}
 
-\section{Methodology}
-    \begin{frame}{Methodology}
+\section{Method}
+    % Metabolomic network construction
+    % T-GAE architecture
+    % Network alignment via KNN
+
+    \begin{frame}{Method}
         \begin{figure}[htp!]
             \centering
             \includegraphics[
@@ -189,7 +372,59 @@
         \end{note}
     \end{frame}
 
+    \begin{frame}{Method overview}
+        % \begin{enumerate}
+        %     \item \textbf{Correlation estimation:} A correlation matrix is computed using partial correlation coefficients to capture direct relationships between metabolites while controlling for the influence of other variables.
+        %     \item \textbf{Metabolic network construction:} A metabolic network is generated in which an edge is established between two nodes when the absolute correlation coefficient satisfies $|\text{coef}| \geq 0.5$. Node attributes incorporate transformed retention time ($Rt$), mass-to-charge ratio ($Mz$), and signal intensity measurements.
+        %     \item \textbf{Graph representation learning:} Node embeddings are learned using the \texttt{T-GAE} architecture, which integrates \texttt{GIN} and \texttt{GINE} graph neural network layers to capture both topological and attribute information.
+        %     \item \textbf{Network alignment:} A node similarity matrix is computed using the K-Nearest Neighbors (\texttt{KNN}) algorithm to identify correspondences between metabolites across different metabolic networks.
+        % \end{enumerate}
+
+        \begin{enumerate}
+            \item \alert{Correlation estimation:} compute a partial correlation matrix.
+            \item \alert{Network construction:} build a metabolic network using a correlation threshold ($|\text{coef}| \geq 0.5$) and incorporate node attributes ($Rt$, $Mz$, and intensities).
+            \item \alert{Graph representation learning:} learn node embeddings with the \texttt{T-GAE} architecture based on \texttt{GIN} and \texttt{GINE} layers.
+            \item \alert{Network alignment:} identify metabolite correspondences using a \texttt{KNN}-based similarity matrix.
+        \end{enumerate}
+
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+
 \section{Experiments}
+    % Dataset
+    % Baseline methods
+    % Evaluation metrics
+    \begin{frame}{Setup}
+        The experiments were conducted on a computer with 256 GB of RAM and 48 GB of VRAM. The tools used were \texttt{Python} and the \texttt{PyTorch Geometric} library.
+
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+
+    \begin{frame}{Dataset}
+        \begin{table}[htp!]
+            % \scriptsize
+            \centering
+            \caption{Datasets.}
+            % \label{tab:table1}
+            \begin{tabular}{@{}llrrrr@{}}
+                \toprule
+                Dataset & Type network & \#Nodes  & \#Edges & \#Features & \#Anchors/Pairs \\
+                \midrule
+                Douban Online & Social    & $3\,906$ & $1\,632$ & $538$ & $1\,118$  \\
+                Douban Offline & Social    & $1\,118$   & $3\,022$  & $538$ & $1\,118$ \\\midrule
+                ACM & Citation  & $9\,916$ & $44\,808$ & $17$ & $6\,325$  \\
+                DBLP & Citation  & $9\,872$ & $39\,561$  & $17$ & $6\,325$  \\\bottomrule 
+            \end{tabular}
+        \end{table}
+
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
 
 \section{Results}
     \begin{frame}{Build metabolomic networks}
@@ -295,9 +530,9 @@
         \end{note}
     \end{frame}
 
-\section{Discussion}
+% \section{Discussion}
 
-\section{Conclusion}
+\section{Conclusions}
 
 \section*{References}
     \begin{frame}

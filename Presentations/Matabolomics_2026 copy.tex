@@ -45,10 +45,8 @@
 \newcommand{\alertplain}[1]{{\color{swufe}#1}}
 
 % Title page setup
-\author[Alvarez-Mamani et al.]{\underline{Edwin Alvarez-Mamani} \inst{1,2}, Deybis Paucar Pinto \inst{1, 2}, Florian Buettner \inst{3}, Alfredo J. Ibañez \inst{1}, Madina Mansurova \inst{1}}
+\author[Alvarez-Mamani et al.]{\underline{Edwin Alvarez-Mamani} \inst{1}, Deybis Paucar Pinto \inst{1}, Alfredo J. Ibañez \inst{1}, Madina Mansurova \inst{1}}
 % \author[Topics]{Topics}
-
-% Goethe-University Frankfurt and the German Cancer Consortium (DKTK)/German Cancer Research Center (DKFZ).
 
 \title[Aligning Metabolomic Networks via Graph Learning...]{Aligning Metabolomic Networks via Graph Learning for Common Subnetwork Discovery}
 % Custom title template with a styled box
@@ -104,18 +102,15 @@
     \end{figure}
 \end{frame}
 
-% \begin{frame}
-%     \frametitle{Outline}
-%     \tableofcontents[sectionstyle=show,subsectionstyle=show/shaded/hide,subsubsectionstyle=show/shaded/hide]
-%     % \tableofcontents[sectionstyle=show,subsectionstyle=hide,subsubsectionstyle=hide]
-% \end{frame}
+\begin{frame}
+    \tableofcontents[sectionstyle=show,subsectionstyle=show/shaded/hide,subsubsectionstyle=show/shaded/hide]
+    % \tableofcontents[sectionstyle=show,subsectionstyle=hide,subsubsectionstyle=hide]
+\end{frame}
 
 % Timing: Your total presentation length is 15 minutes, broken down as:  
 % - 10-12 minutes of talking/presenting 
 % - 2-4 minutes of Q&A with the audience 
 % - 1 minute to transition to the next speaker 
-
-% Quitar Outline
 
 \section{Introduction}
     % Motivation and research gap
@@ -147,74 +142,51 @@
 
     \begin{frame}{Problem formulation}
         % Targeted and untargeted analyses
-        The mass spectrometry analysis includes two approach: \alert{targeted} analysis and \alert{untargeted} analysis.
+        The mass spectrometry analysis includes two approach: % targeted analysis and untargeted analysis.
+        \begin{itemize}
+            \item \alert{Targeted approach:} the molecule of interest or m/z values (for MS and MS/MS) are predefined for quantitation of analytes present in a complex samples matrix. %, with high sensitivity, accuracy, and specificity
+            \item \alert{Untargeted approach:} is the analysis to identify the unknowns in a sample, using parent ion and product or fragment ion analysis (MS/MS).
+        \end{itemize}
 
-        % \begin{itemize}
-        %     \item \alert{Targeted approach:} the molecule of interest or m/z values (for MS and MS/MS) are predefined for quantitation of analytes present in a complex samples matrix. %, with high sensitivity, accuracy, and specificity
-        %     \item \alert{Untargeted approach:} is the analysis to identify the unknowns in a sample, using parent ion and product or fragment ion analysis (MS/MS).
-        % \end{itemize}
-
-        \begin{columns}[b] % Option "c" centers vertically, while "t" aligns to the top.
-            \begin{column}{0.65\textwidth}
-                \begin{figure}[htp!]
-                    \centering
-                    \includegraphics[
-                        width=1.0\linewidth,
-                        trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
-                        clip
-                    ]{../images/metabolomics_workflow.png}
-                    \caption{Metabolomics workflow.}
-                    \source{\cite{putri2014mass}} 
-                    % \label{fig:my_image}
-                \end{figure}
-            \end{column}
-            \begin{column}{0.35\textwidth}
-                \begin{figure}[htp!]
-                    \centering
-                    \includegraphics[
-                        width=1.0\linewidth,
-                        trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
-                        clip
-                    ]{../images/untargeted_data.pdf}
-                    \caption{Untargeted composition.}
-                    \source{Adapted from \cite{sindelar2020chemical}}
-                    % \label{fig:my_image}
-                \end{figure}
-            \end{column}
-        \end{columns}
+        \begin{figure}[htp!]
+            \centering
+            \includegraphics[
+                width=0.46\linewidth,
+                trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
+                clip
+            ]{../images/untargeted_data.pdf}
+            \caption{Composition of an untargeted metabolomic data.}
+            \source{Adapted from \cite{sindelar2020chemical}}
+            % \label{fig:my_image}
+        \end{figure}
 
         \begin{note}
             {Introduce your self}
         \end{note}
     \end{frame}
 
-    % \begin{frame}{Untargeted mass spectrometry workflow}
-    %     A data matrix (sample vs. metabolites) acquired from a mass spectrometry-based metabolomics study includes not only biological information but also technical noise. % There are several techniques for univariate or multivariate statistical analysis. Some statistical methods used are: Principal component analysis (PCA), Hierarchical cluster analysis (HCA), Correlation analysis (CA), Projection to latent structure regression (PLS-R), Projection to latent structure discriminant analysis (PLS-DA), and t-Test. It is very important to use and interpret the statistical result accurate \cite{putri2014mass}.
+    \begin{frame}{Untargeted mass spectrometry workflow}
+        A data matrix (sample vs. metabolites) acquired from a mass spectrometry-based metabolomics study includes not only biological information but also technical noise. % There are several techniques for univariate or multivariate statistical analysis. Some statistical methods used are: Principal component analysis (PCA), Hierarchical cluster analysis (HCA), Correlation analysis (CA), Projection to latent structure regression (PLS-R), Projection to latent structure discriminant analysis (PLS-DA), and t-Test. It is very important to use and interpret the statistical result accurate \cite{putri2014mass}.
 
-    %     \begin{note}
-    %         {Introduce your self}
-    %     \end{note}
-    % \end{frame}
+        \begin{figure}[htp!]
+            \centering
+            \includegraphics[
+                width=0.7\linewidth,
+                trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
+                clip
+            ]{../images/metabolomics_workflow.png}
+            \caption{Metabolomics workflow.}
+            \source{\cite{putri2014mass}} 
+            % \label{fig:my_image}
+        \end{figure}
+
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
 
     \begin{frame}{Our objectives}
-        Aligning metabolomic metworks for filter Mass spectrometry data via Graph Neural Network models.
-
-        % Filtering and detecting of significant changes between metabolomic networks using graph representation learning models and an anomaly detection algorithm to obtain reliable results in less time.
-
-        \begin{itemize}
-            % \item Improve the detection of significant changes between metabolomic networks using Graph Neural Network (GNN) models and to obtain reliable results in less time.
-            % \item Develop a pipeline for data processing and analysis.
-            % \item Develop a pipeline for data processing and analysis.
-
-            \item Develop a pipeline for the analysis of metabolomic networks.
-            \item Model metabolomic networks from mass spectrometry data.
-            \item Implement GNN models to learn metabolite representations. % for network alignment tasks
-            \item Evaluate the effectiveness of the proposed GNN-based alignment approach.
-            % \item Comparison of the quality of node embeddings. % (generated by GNN models) for the analysis of metabolomic networks. % check
-            % \item Evaluation of execution times in the generation and manipulation of embeddings.
-            % \item Implement a web application for the analysis of metabolomic networks.
-            % \item Develop a web application.
-        \end{itemize}
+        Aligning metabolomic metworks for filter MS data.
 
         \begin{note}
             {Introduce your self}
@@ -411,8 +383,8 @@
         % \end{enumerate}
 
         \begin{enumerate}
-            \item \alert{Correlation estimation:} compute the partial correlation matrix $P = [\rho_{ij}]$ from mass espectrometry data.
-            \item \alert{Network construction:} build a metabolic network using a correlation threshold ($|\rho_{ij}| \geq 0.5$), incorporate node features (like $Rt$, $Mz$, $Avg\; intensities$) and edge features (like $|\rho_{ij}|$, $\operatorname{sign}(\rho_{ij})$).
+            \item \alert{Correlation estimation:} compute a partial correlation matrix.
+            \item \alert{Network construction:} build a metabolic network using a correlation threshold ($|\text{coef}| \geq 0.5$) and incorporate node attributes ($Rt$, $Mz$, and intensities).
             \item \alert{Graph representation learning:} learn node embeddings with the \texttt{T-GAE} architecture based on \texttt{GIN} and \texttt{GINE} layers.
             \item \alert{Network alignment:} identify metabolite correspondences using a \texttt{KNN}-based similarity matrix.
         \end{enumerate}
@@ -435,9 +407,29 @@
     \end{frame}
 
     \begin{frame}{Dataset}
-        Experiments using the following datasets: Cacao, Leaf dataset (citar), Mentos datasets.
+        Experiments using the following datasets: Leaf dataset (citar), Cacao daset.
 
-        
+        \begin{table}[htp!]
+            \scriptsize
+            \centering
+            \caption{Cacao dataset.} % December
+            % \label{tab:table1}
+            \begin{tabular}{@{}lcrrrcr@{}}\toprule
+                Group & Subgroup & \#Nodes  & \#Edges & Density & Is connected? & Node features (dim.) \\\midrule
+                SecoAmazonas &	1 &	162	& 10268 &	0.787363 &	True &	signal intensity (3) \\
+                SecoAmazonas &	2 &	162	& 8728 &	0.669274 &	True &	signal intensity (3) \\\midrule
+                SecoSanMartin &	1 &	162	& 9771 &	0.749252 &	True &	signal intensity (3) \\
+                SecoSanMartin &	2 &	162	& 9705 &	0.744191 &	True &	signal intensity (3) \\\midrule
+                SecoCusco &	1 &	162	& 11297 &	0.866268& 	True &	signal intensity (3) \\
+                SecoCusco &	2 &	162	& 8765 &	0.672111& 	True &	signal intensity (3) \\\midrule
+                FrescoAmazonas &	1 &	162 &	9406 &	0.721264 &	True &	signal intensity (3) \\
+                FrescoAmazonas &	2 &	162 &	9006 &	0.690591 &	True &	signal intensity (3) \\\midrule
+                FrescoSanMartin &	1 &	162 &	9818 &	0.752856 &	True &	signal intensity (3) \\
+                FrescoSanMartin &	2 &	162 &	9454 &	0.724944 &	True &	signal intensity (3) \\\midrule
+                FrescoCusco &	1 &	162 &	10366 &	0.794878 &	True &	signal intensity (3) \\
+                FrescoCusco &	2 &	162 &	9249 &	0.709225 &	True &	signal intensity (3) \\\bottomrule 
+            \end{tabular}
+        \end{table}
 
         % \begin{table}[htp!]
         %     % \scriptsize
@@ -463,22 +455,23 @@
     \begin{frame}{Experiments setup}
 
         \begin{table}[htp!]
-            % \scriptsize
+            \scriptsize
             \centering
             \caption{Experiments setup.}
             % \label{tab:table1}
             \begin{tabular}{@{}ll@{}}\toprule
                 Features & Values \\\midrule
                 Node embedding & 
-                \texttt{T-GAE} \\
-                Architectures & \texttt{GIN}, \texttt{GINE} \\
-                Dimensions & 16, 32, 64 \\ %, 256, 512 \\
-                Optimizer & Adam with $lr=10^{-4}$, $weight\_decay=5 \times 10^{-4}$ \\
+                \texttt{VGAE}, \texttt{LVGAE}, \texttt{ARGVA}, \texttt{DGI} \\
+                Positional encoding & Laplacian eigenvector PE, Random walk PE \\ % k=3, wlak_random=3
+                Dimensions & 2, 3, 4, 8, 16, 32, 64, 128 \\ %, 256, 512 \\
+                Optimizer & Adam with $lr=10^{-2}$, $weight\_decay=10^{-4}$ \\
                 Early stopping & $patience=10$ \\
                 Epochs & 100 \\\midrule
-                Node features & $Mz$, $Rt$, $\operatorname{log}(Avg\; intensities)$, $Std\; intensities$, $Cv\; intensities$ \\
-                Edge features & $|\rho_{ij}|$, $\operatorname{sign}(\rho_{ij})$, $\rho_{ij}^{2}$ \\\midrule
-                Dataset & Cacao, Leaf, Mentos \\\bottomrule
+                Edge embedding & \texttt{Weighted-L2} \\\midrule
+                Outliers detection & \texttt{COPOD} with ($contamination=0.1$) \\\midrule
+                Dataset & Synthetic, Mutant, Leaf, Mentos \\
+                Network variations & \textit{none} (0:0), \textit{one-to-one} (1:1), \textit{many-to-many} (m:m) \\\bottomrule
             \end{tabular}
         \end{table}
 
@@ -490,24 +483,20 @@
 \section{Results}
     \begin{frame}{Build metabolomic networks}
         \begin{table}[htp!]
-            \scriptsize
+            % \scriptsize
             \centering
-            \caption{Cacao dataset.} % December
+            \caption{Dataset information.}
             % \label{tab:table1}
-            \begin{tabular}{@{}lcrrrcr@{}}\toprule
-                Group & Subgroup & $|V|$  & |E| & Density & Is connected? \\\midrule
-                SecoAmazonas &	1 &	162	& 10268 &	0.787363 &	True & \\
-                SecoAmazonas &	2 &	162	& 8728 &	0.669274 &	True & \\\midrule
-                SecoSanMartin &	1 &	162	& 9771 &	0.749252 &	True & \\
-                SecoSanMartin &	2 &	162	& 9705 &	0.744191 &	True & \\\midrule
-                SecoCusco &	1 &	162	& 11297 &	0.866268& 	True & \\
-                SecoCusco &	2 &	162	& 8765 &	0.672111& 	True & \\\midrule
-                FrescoAmazonas &	1 &	162 &	9406 &	0.721264 &	True & \\
-                FrescoAmazonas &	2 &	162 &	9006 &	0.690591 &	True & \\\midrule
-                FrescoSanMartin &	1 &	162 &	9818 &	0.752856 &	True & \\
-                FrescoSanMartin &	2 &	162 &	9454 &	0.724944 &	True & \\\midrule
-                FrescoCusco &	1 &	162 &	10366 &	0.794878 &	True & \\
-                FrescoCusco &	2 &	162 &	9249 &	0.709225 &	True & \\\bottomrule 
+            \begin{tabular}{lrrrrlr}\toprule
+                Group & Subgroup & $|V|$ & $|E|$ & Density & Connected \\\midrule
+                \textit{secoAmazonas} & 1 & 2071 & $1\,113\,277$ & 0.52 & True \\
+                \textit{secoAmazonas} & 2 & 2071 & $1\,085\,089$ & 0.51 & True \\
+                \textit{secoSanMartin} & 1 & 2069 & $1\,082\,335$ & 0.51 & True \\
+                \textit{secoSanMartin} & 2 & 2071 & $1\,103\,292$ & 0.51 & True \\
+                \textit{secoCusco} & 1 & 2072 & $1\,091\,447$ & 0.51 & True \\
+                \textit{secoCusco} & 2 & 2072 & $1\,086\,182$ & 0.51 & True \\
+                \textit{frescoCusco} & 1 & 2071 & $1\,114\,859$ & 0.52 & True \\
+                \textit{frescoCusco} & 2 & 2072 & $1\,089\,225$ & 0.51 & True \\\bottomrule
             \end{tabular}
         \end{table}
 
@@ -595,66 +584,29 @@
         \end{note}
     \end{frame}
 
-    \begin{frame}{Comparison}
-        \begin{figure}[htp!]
-            \centering
-            \includegraphics[
-                width=0.5\linewidth,
-                trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
-                clip
-            ]{../images/filtering_results.png}
-            \caption{My image.}
-            % \source{Author, 2024.}
-            % \label{fig:my_image}
-        \end{figure}
-
-        \begin{note}
-            {Introduce your self}
-        \end{note}
-    \end{frame}
-
-    % Clustering analysis
-
 % \section{Discussion}
 
 \section{Conclusions}
-    \begin{frame}{Conclusions}
-        Our proposal, is a approach to the exploratory analysis of metabolic networks.
+    Our proposal, called \texttt{GEMNA}, is a new approach to the exploratory analysis of metabolic networks.
+    \begin{itemize}
+        \item We designed a pipeline for a metabolomic study. \texttt{GEMNA} consists of three steps: \textit{network generation}, \textit{network filtering}, and \textit{similarity analysis}.
 
-        % Features
-        \begin{itemize}
-            % Significant, noise
-            \item Features shared by cacao beans within the same group are retained, reducing the number of features before identification is attempted.
-            
-            % Prediction, inferencial
-            \item A core graph embedding is generated for each cacao bean, providing a compact representation that can be used as input to a classifier for subsequent cacao bean identification.
-            
-            % Worflow, improve  (atemporal)
-            \item The alignment workflow enables samples acquired on different days to be integrated into a single dataset. This approach mitigates known batch effects, such as retention-time shifts, while the graph embedding favors correlations among signals rather than depending on their absolute intensity values.
-            
-            % \item We designed a pipeline for a metabolomic study. \texttt{GEMNA} consists of three steps: \textit{network generation}, \textit{network filtering}, and \textit{similarity analysis}.
+        \item We evaluated the execution time for generating node embeddings and edge embeddings. The experiments demonstrate that \texttt{DGI} model is faster than \texttt{VGAE}, \texttt{LVGAE}, \texttt{ARGVA}, to generate node embeddings. % using node embeddings (based on GNN), edge embeddings, and anomaly detection algorithm.
 
-            % \item We evaluated the execution time for generating node embeddings and edge embeddings. The experiments demonstrate that \texttt{DGI} model is faster than \texttt{VGAE}, \texttt{LVGAE}, \texttt{ARGVA}, to generate node embeddings. % using node embeddings (based on GNN), edge embeddings, and anomaly detection algorithm.
+        \item Experiments show that our \texttt{GEMNA} is an improvement over traditional statistical-based techniques. The evaluation by silhouette score reported that \texttt{GEMNA} obtained $0.41$, meanwhile, the statistical method obtained $-0.004$. % For example, for the Mentos candy dataset, the data clusters produced by \texttt{GEMNA} were better than the ones used in traditional techniques based on statistics. \texttt{GEMNA} has $silhouette\:score = 0.409$, \textit{vs} the traditional approach has $silhouette\:score = -0.004$.
 
-            % \item Experiments show that our \texttt{GEMNA} is an improvement over traditional statistical-based techniques. The evaluation by silhouette score reported that \texttt{GEMNA} obtained $0.41$, meanwhile, the statistical method obtained $-0.004$. % For example, for the Mentos candy dataset, the data clusters produced by \texttt{GEMNA} were better than the ones used in traditional techniques based on statistics. \texttt{GEMNA} has $silhouette\:score = 0.409$, \textit{vs} the traditional approach has $silhouette\:score = -0.004$.
+        \item We developed a web application for metabolomic network analysis and the source code is available on GitHub.
+    \end{itemize}
 
-            % \item We developed a web application for metabolomic network analysis and the source code is available on GitHub.
-        \end{itemize}
+\begin{frame}{Future works}
+    Based on these results, I recommend analyzing metabolomic networks using \textit{Geometric Graph Neural Networks} (GGNN) models.
 
-        \begin{note}
-            {Write your notes here}
-        \end{note}
-    \end{frame}
-
-% \begin{frame}{Future works}
-%     Based on these results, I recommend analyzing metabolomic networks using \textit{Geometric Graph Neural Networks} (GGNN) models.
-
-%     These models create node embeddings using the graph structure, node and edge features, and a feature tensor that helps infer the position of each metabolite within the network.
+    These models create node embeddings using the graph structure, node and edge features, and a feature tensor that helps infer the position of each metabolite within the network.
     
-%     \begin{note}
-%         {Write your notes here}
-%     \end{note}
-% \end{frame}
+    \begin{note}
+        {Write your notes here}
+    \end{note}
+\end{frame}
 
 \section*{References}
     \begin{frame}

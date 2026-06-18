@@ -68,10 +68,12 @@
 }
 
 % \subtitle{Jiangnan University Academic Report Beamer Template}
+\institute[JNU]{\footnotesize{\inst{1} Institute for Omics Sciences and Applied Biotechnology, Pontificia Universidad Católica del Perú} \\ \footnotesize{\inst{2} Department of Informatics, Universidad Nacional de San Antonio Abad del Cusco} \\ \footnotesize{\inst{3} German Cancer Research Center, Goethe University Frankfurt and German Cancer Consortium}}
 % \institute[JNU]{\normalsize{\inst{1} School of Business \quad Jiangnan University \quad \textit{****@qq.com}}}
-\institute[ICOBA-PUCP, UNSAAC]{
-    \includegraphics[width=0.15\linewidth]{../images/pucp.png}
-}
+
+% \institute[ICOBA-PUCP, UNSAAC]{
+%     \includegraphics[width=0.15\linewidth]{../images/pucp.png}
+% }
 
 % \date{\today}
 \date{\scriptsize June, 2026}
@@ -358,9 +360,9 @@
     \end{frame}
 
     \begin{frame}{Base GNN model}
-        \texttt{T-GAE}: Transferable Graph Autoencoder for Network Alignment.
+        \texttt{T-GAE}: Transferable Graph Autoencoder for Network Alignment \cite{he2024t}.
 
-        \scriptsize (He, J., Kanatsoulis, C., \& Ribeiro, A., 2024)
+        % \scriptsize (He, J., Kanatsoulis, C., \& Ribeiro, A., 2024)
 
         \begin{figure}[htp!]
             \centering
@@ -435,9 +437,15 @@
     \end{frame}
 
     \begin{frame}{Dataset}
-        Experiments using the following datasets: Cacao, Leaf dataset (citar), Mentos datasets.
-
+        These 4 datasets were used in the experiments. \\
         
+        \begin{itemize}
+            \item Synthetic
+            % \item Mutant \cite{buettner2017non}
+            \item Leaf \cite{gonzalez2023climate}
+            \item Mentos (from ICOBA-PUCP)
+            \item Cacao (from ICOBA-PUCP)
+        \end{itemize}
 
         % \begin{table}[htp!]
         %     % \scriptsize
@@ -496,20 +504,42 @@
             % \label{tab:table1}
             \begin{tabular}{@{}lcrrrcr@{}}\toprule
                 Group & Subgroup & $|V|$  & |E| & Density & Is connected? \\\midrule
-                SecoAmazonas &	1 &	162	& 10268 &	0.787363 &	True & \\
-                SecoAmazonas &	2 &	162	& 8728 &	0.669274 &	True & \\\midrule
-                SecoSanMartin &	1 &	162	& 9771 &	0.749252 &	True & \\
-                SecoSanMartin &	2 &	162	& 9705 &	0.744191 &	True & \\\midrule
-                SecoCusco &	1 &	162	& 11297 &	0.866268& 	True & \\
-                SecoCusco &	2 &	162	& 8765 &	0.672111& 	True & \\\midrule
-                FrescoAmazonas &	1 &	162 &	9406 &	0.721264 &	True & \\
-                FrescoAmazonas &	2 &	162 &	9006 &	0.690591 &	True & \\\midrule
-                FrescoSanMartin &	1 &	162 &	9818 &	0.752856 &	True & \\
-                FrescoSanMartin &	2 &	162 &	9454 &	0.724944 &	True & \\\midrule
-                FrescoCusco &	1 &	162 &	10366 &	0.794878 &	True & \\
-                FrescoCusco &	2 &	162 &	9249 &	0.709225 &	True & \\\bottomrule 
+                DryAmazonas    &	1 &	162	& 5001 &	0.383483 &	True & \\
+                DryAmazonas    &	2 &	162	& 4096 &	0.314010 &	True & \\\midrule
+                DrySanMartin   &	1 &	162	& 3817 &	0.292692 &	True & \\
+                DrySanMartin   &	2 &	162	& 3728 &	0.285868 &	True & \\\midrule
+                DryCusco       &	1 &	162	& 4265 &	0.327045 & 	True & \\
+                DryCusco       &	2 &	162	& 3348 &	0.256729 & 	True & \\\midrule
+                FreshAmazonas  &	1 &	162 & 3749 &	0.287478 &	True & \\
+                FreshAmazonas  &	2 &	162 & 3946 &	0.302584 &	False & \\\midrule
+                FreshSanMartin &	1 &	162 & 3818 &	0.292769 &	True & \\
+                FreshSanMartin &	2 &	162 & 3460 &	0.265317 &	True & \\\midrule
+                FreshCusco     &	1 &	162 & 3600 &	0.276052 &	True & \\
+                FreshCusco     &	2 &	162 & 3669 &	0.281343 &	True & \\\bottomrule 
             \end{tabular}
         \end{table}
+
+        % \begin{table}[htp!]
+        %     \scriptsize
+        %     \centering
+        %     \caption{Cacao dataset.} % December
+        %     % \label{tab:table1}
+        %     \begin{tabular}{@{}lcrrrcr@{}}\toprule
+        %         Group & Subgroup & $|V|$  & |E| & Density & Is connected? \\\midrule
+        %         SecoAmazonas &	1 &	162	& 10268 &	0.787363 &	True & \\
+        %         SecoAmazonas &	2 &	162	& 8728 &	0.669274 &	True & \\\midrule
+        %         SecoSanMartin &	1 &	162	& 9771 &	0.749252 &	True & \\
+        %         SecoSanMartin &	2 &	162	& 9705 &	0.744191 &	True & \\\midrule
+        %         SecoCusco &	1 &	162	& 11297 &	0.866268& 	True & \\
+        %         SecoCusco &	2 &	162	& 8765 &	0.672111& 	True & \\\midrule
+        %         FrescoAmazonas &	1 &	162 &	9406 &	0.721264 &	True & \\
+        %         FrescoAmazonas &	2 &	162 &	9006 &	0.690591 &	True & \\\midrule
+        %         FrescoSanMartin &	1 &	162 &	9818 &	0.752856 &	True & \\
+        %         FrescoSanMartin &	2 &	162 &	9454 &	0.724944 &	True & \\\midrule
+        %         FrescoCusco &	1 &	162 &	10366 &	0.794878 &	True & \\
+        %         FrescoCusco &	2 &	162 &	9249 &	0.709225 &	True & \\\bottomrule 
+        %     \end{tabular}
+        % \end{table}
 
         \begin{note}
             {Write your notes here}
@@ -523,8 +553,8 @@
                 width=0.45\linewidth,
                 trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
                 clip
-            ]{../images/secoSanMartin.png}
-            \caption{Node embedding (\textit{secoSanMartin}).}
+            ]{../images/node_embeddings_2d_GINE_SecoCusco.pdf}
+            \caption{Node embeddings (DryCusco).}
             % \source{Author, 2024.}
             % \label{fig:my_image}
         \end{figure}
@@ -540,26 +570,25 @@
                 \begin{table}[htp!]
                     \scriptsize
                     \centering
-                    \caption{Node aligment (\textit{secoSanMartin}).}
+                    \caption{Node aligment (DryCusco).}
                     % \label{tab:table1}
                     \begin{tabular}{rl}\toprule
-                        ID 1 & ID 2 \\\midrule
+                        ID 1 & ID 2 \\\midrule                        
+                        0 & 93 \\
                         \rowcolor{yellow}
-                        13 & 13 \\
-                        19 & 252 \\
-                        27 & 378 \\
-                        31 & 1148 \\
+                        2 & 2 \\
+                        4 & 57 \\
                         \rowcolor{yellow}
-                        38 & 38 \\
-                        43 & 273 \\
-                        49 & 72 \\
-                        \rowcolor{yellow}
-                        50 & 50 \\
-                        51 & 366 \\
-                        53 & 241 \\
-                        73 & 270 \\
+                        5 & 5 \\
+                        7 & 93 \\
                         ... & ... \\
-                        1825 & 1726 \\\bottomrule
+                        \rowcolor{yellow}
+                        542 & 542 \\
+                        \rowcolor{yellow}
+                        551 & 551 \\
+                        556 & 509 \\
+                        557 & 550 \\
+                        558 & 530 \\\bottomrule
                     \end{tabular}
                 \end{table}
             \end{column}
@@ -568,23 +597,23 @@
                 \begin{table}[htp!]
                     \scriptsize
                     \centering
-                    \caption{Node filtered \textbf{133/2072} (\textit{secoSanMartin}).}
+                    \caption{Node filtered \textbf{294/559} (DryCusco).}
                     % \label{tab:table1}
                     \begin{tabular}{lrrl}\toprule
                         ID & Rt & Mz & Metabolite name \\\midrule
-                        13 & 6.10 & 281.05 & Unknown \\
-                        38 & 6.16 & 182.10 & Unknown \\
-                        50 & 6.20 & 354.10 & Unknown \\
-                        128 & 6.47 & 119.20 & Unknown \\
-                        184 & 6.76 & 341.14 & Unknown \\
-                        261 & 7.23 & 371.06 & Unknown \\
-                        272 & 7.29 & 327.01 & Unknown \\
-                        314 & 7.61 & 57.02 & DECANE; EI-B; MS \\
-                        336 & 7.77 & 53.96 & Unknown \\
-                        339 & 7.81 & 328.01 & Unknown \\
-                        400 & 8.31 & 109.08 & CITRONELLYL ACETATE... \\ %; EI-B; MS \\
-                        402 & 8.31 & 109.13 & BETA-HOMOCYCLOCITRAL... \\ %; EI-B; MS \\
-                        407 & 8.37 & 401.11 & Unknown \\\bottomrule
+                        2	& 0.097	& 172.95681 & Unknown \\
+                        5	& 0.201	& 144.98254 & Unknown \\
+                        15	& 1.871	& 118.08675 & Betaine \\
+                        30	& 1.949	& 446.88860 & Unknown \\
+                        % 32	& 2.020	& 151.03559 & [Similar to: N-Acetyl-L-cysteine; ΔMass: -13.0... \\
+                        % 38	& 2.086	& 381.08003 & 5-({[3-chloro-5-(trifluoromethyl)-2-pyridyl]me... \\
+                        46 &	2.110	& 118.08671	& Betaine \\
+                        531	& 29.792	& 374.30350 & Docosahexaenoic acid ethyl ester \\
+                        532	& 29.794	& 352.32167 & Unknown \\
+                        537	& 29.838	& 454.42642 & N-Hexacosanoylglycine \\
+                        538	& 29.839	& 150.12816 & 2,6-Diethylaniline \\
+                        542	& 29.860	& 398.23344 & Drotaverine \\
+                        551	& 29.954	& 150.12807 & 2,6-Diethylaniline \\\bottomrule
                     \end{tabular}
                 \end{table}
             \end{column}
@@ -595,15 +624,33 @@
         \end{note}
     \end{frame}
 
-    \begin{frame}{Comparison}
+    \begin{frame}{Clustering analysis}
         \begin{figure}[htp!]
             \centering
             \includegraphics[
                 width=0.5\linewidth,
                 trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
                 clip
-            ]{../images/filtering_results.png}
-            \caption{My image.}
+            ]{../images/clustering_GINE_SecoCusco.pdf}
+            \caption{Clustering (DryCusco).}
+            % \source{Author, 2024.}
+            % \label{fig:my_image}
+        \end{figure}
+
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
+
+    \begin{frame}{Comparison of encoders}
+        \begin{figure}[htp!]
+            \centering
+            \includegraphics[
+                width=0.8\linewidth,
+                trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
+                clip
+            ]{../images/number_node_alignment.pdf}
+            \caption{\texttt{GIN} vs. \texttt{GINE}.}
             % \source{Author, 2024.}
             % \label{fig:my_image}
         \end{figure}
@@ -614,6 +661,9 @@
     \end{frame}
 
     % Clustering analysis
+    % exp5
+    % gine fresco cusco
+    % gine seco cusco
 
 % \section{Discussion}
 
@@ -671,19 +721,19 @@
     % \input{ref.bib}
     \begin{frame}[allowframebreaks]
         \footnotesize % use this command to resize
-        % \bibliography{ref}
-        % \bibliographystyle{unsrt}
+        \bibliography{ref}
+        \bibliographystyle{unsrt}
         % \bibliographystyle{alpha}
         
-        \begin{itemize}
-            \item Erciyes, K. (2018). \textit{Guide to graph algorithms} % (pp. 15-35). Springer International Publishing.
-            \item Yao Ma, Jiliang Tang. (2021). \textit{Deep Learning on Graphs}.
-            \item Stamile C., Marzullo A., Deusebio E. (2021). \textit{Graph Machine Learning}.
-            \item Wu, L., Cui, P., Pei, J., Zhao, L., \& Guo, X. (2022). \textit{Graph neural networks: foundation, frontiers and applications}. % In Proceedings of the 28th ACM SIGKDD conference on knowledge discovery and data mining (pp. 4840-4841).            
-            % \item Knickerbocker D. (2023). \textit{Graph Network Science with Python}.
-            \item Knickerbocker, D. (2023). \textit{Network Science with Python}. % Packt Publishing Ltd.
-            \item Labonne, M. (2023). \textit{Hands-On Graph Neural Networks Using Python}.
-            \item Broadwater, K., \& Stillman, N. (2025). \textit{Graph neural networks in action}. % Simon and Schuster.
-        \end{itemize}
+        % \begin{itemize}
+        %     \item Erciyes, K. (2018). \textit{Guide to graph algorithms} % (pp. 15-35). Springer International Publishing.
+        %     \item Yao Ma, Jiliang Tang. (2021). \textit{Deep Learning on Graphs}.
+        %     \item Stamile C., Marzullo A., Deusebio E. (2021). \textit{Graph Machine Learning}.
+        %     \item Wu, L., Cui, P., Pei, J., Zhao, L., \& Guo, X. (2022). \textit{Graph neural networks: foundation, frontiers and applications}. % In Proceedings of the 28th ACM SIGKDD conference on knowledge discovery and data mining (pp. 4840-4841).            
+        %     % \item Knickerbocker D. (2023). \textit{Graph Network Science with Python}.
+        %     \item Knickerbocker, D. (2023). \textit{Network Science with Python}. % Packt Publishing Ltd.
+        %     \item Labonne, M. (2023). \textit{Hands-On Graph Neural Networks Using Python}.
+        %     \item Broadwater, K., \& Stillman, N. (2025). \textit{Graph neural networks in action}. % Simon and Schuster.
+        % \end{itemize}
     \end{frame}
 \end{document}

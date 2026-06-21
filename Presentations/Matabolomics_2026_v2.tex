@@ -45,7 +45,7 @@
 \newcommand{\alertplain}[1]{{\color{swufe}#1}}
 
 % Title page setup
-\author[Edwin A. M. et al.]{\underline{Edwin Alvarez-Mamani} \inst{1,2}, Deybis Paucar Pinto \inst{1, 2}, Florian Buettner \inst{3}, Alfredo J. Ibañez \inst{1}, Madina Mansurova \inst{1}}
+\author[Alvarez-Mamani et al.]{\underline{Edwin Alvarez-Mamani} \inst{1,2}, Deybis Paucar Pinto \inst{1, 2}, Florian Buettner \inst{3}, Alfredo J. Ibañez \inst{1}, Madina Mansurova \inst{1}}
 % \author[Topics]{Topics}
 
 % Goethe-University Frankfurt and the German Cancer Consortium (DKTK)/German Cancer Research Center (DKFZ).
@@ -68,7 +68,7 @@
 }
 
 % \subtitle{Jiangnan University Academic Report Beamer Template}
-\institute[ICOBA-PUCP, UNSAAC, ]{\footnotesize{\inst{1} \texttt{Institute for Omics Sciences and Applied Biotechnology, Pontificia Universidad Católica del Perú}} \\ \footnotesize{\inst{2} \texttt{Department of Informatics, Universidad Nacional de San Antonio Abad del Cusco}} \\ \footnotesize{\inst{3} \texttt{German Cancer Research Center, Goethe University Frankfurt and German Cancer Consortium}}}
+\institute[JNU]{\footnotesize{\inst{1} Institute for Omics Sciences and Applied Biotechnology, Pontificia Universidad Católica del Perú} \\ \footnotesize{\inst{2} Department of Informatics, Universidad Nacional de San Antonio Abad del Cusco} \\ \footnotesize{\inst{3} German Cancer Research Center, Goethe University Frankfurt and German Cancer Consortium}}
 % \institute[JNU]{\normalsize{\inst{1} School of Business \quad Jiangnan University \quad \textit{****@qq.com}}}
 
 % \institute[ICOBA-PUCP, UNSAAC]{
@@ -107,6 +107,7 @@
 \end{frame}
 
 % \begin{frame}
+%     \frametitle{Outline}
 %     \tableofcontents[sectionstyle=show,subsectionstyle=show/shaded/hide,subsubsectionstyle=show/shaded/hide]
 %     % \tableofcontents[sectionstyle=show,subsectionstyle=hide,subsubsectionstyle=hide]
 % \end{frame}
@@ -146,46 +147,6 @@
 
     % Motivation_ unta
 
-    \begin{frame}{Acknowledgments}
-        % 
-        % The authors acknowledge the financial support provided by the Consejo Nacional de Ciencia, Tecnología e InnovaciónTecnológica (CONCYTEC–Prociencia) through funding project PE501086715-2024-PROCIENCIA. \newline
-
-        Financial support was provided by CONCYTEC-Prociencia through project PE501086715-2024-PROCIENCIA. Also, I gratefully acknowledge the Pontificia Universidad Católica del Perú (PUCP) for the financial support provided for conference registration.
-
-        \begin{columns}[b] % Option "c" centers vertically, while "t" aligns to the top.
-            \begin{column}{0.5\textwidth}
-                \begin{figure}[htp!]
-                    \centering
-                    \includegraphics[
-                        width=0.8\linewidth,
-                        trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
-                        clip
-                    ]{../images/PUCP_logo.png}
-                    % \caption{Metabolomics workflow.}
-                    % \source{\cite{putri2014mass}} 
-                    % \label{fig:my_image}
-                \end{figure}
-            \end{column}
-            \begin{column}{0.5\textwidth}
-                \begin{figure}[htp!]
-                    \centering
-                    \includegraphics[
-                        width=0.6\linewidth,
-                        trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
-                        clip
-                    ]{../images/PROCIENCIA-LOGO.png}
-                    % \caption{Metabolomics workflow.}
-                    % \source{\cite{putri2014mass}} 
-                    % \label{fig:my_image}
-                \end{figure}
-            \end{column}
-        \end{columns}
-
-        \begin{note}
-            {Introduce your self}
-        \end{note}
-    \end{frame}
-
     \begin{frame}{Problem formulation}
         % Targeted and untargeted analyses
         The mass spectrometry analysis includes two approach: \alert{targeted} analysis and \alert{untargeted} analysis.
@@ -196,7 +157,7 @@
         % \end{itemize}
 
         \begin{columns}[b] % Option "c" centers vertically, while "t" aligns to the top.
-            \begin{column}{0.6\textwidth}
+            \begin{column}{0.65\textwidth}
                 \begin{figure}[htp!]
                     \centering
                     \includegraphics[
@@ -204,12 +165,12 @@
                         trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
                         clip
                     ]{../images/metabolomics_workflow.png}
-                    \caption{Metabolomics workflow \footnote{Veličković, P., Cucurull, G., Casanova, A., Romero, A., Lio, P., \& Bengio, Y. (2017). Graph attention networks. arXiv preprint arXiv:1710.10903.}.}
-                    % \source{\cite{putri2014mass}} 
+                    \caption{Metabolomics workflow.}
+                    \source{\cite{putri2014mass}} 
                     % \label{fig:my_image}
                 \end{figure}
             \end{column}
-            \begin{column}{0.3\textwidth}
+            \begin{column}{0.35\textwidth}
                 \begin{figure}[htp!]
                     \centering
                     \includegraphics[
@@ -238,8 +199,7 @@
     % \end{frame}
 
     \begin{frame}{Our objectives}
-        % Aligning metabolomic networks for \alert{filter} mass spectrometry data via graph neural network models.
-        Aligning metabolomic networks to filter relevant features from Mass Spectrometry data via Graph Neural Networks.
+        Aligning metabolomic metworks for filter Mass spectrometry data via Graph Neural Network models.
 
         % Filtering and detecting of significant changes between metabolomic networks using graph representation learning models and an anomaly detection algorithm to obtain reliable results in less time.
 
@@ -410,7 +370,7 @@
                 width=0.9\linewidth,
                 trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
                 clip
-            ]{../images/T-GAE.png}
+            ]{../images/T-GAE.jpg}
             \caption{\texttt{T-GAE} encoder.}
             % \source{Author, 2024.}
             % \label{fig:my_image}
@@ -425,24 +385,6 @@
     % Metabolomic network construction
     % T-GAE architecture
     % Network alignment via KNN
-
-    \begin{frame}{Mass spectrometry data}
-        \begin{figure}[htp!]
-            \centering
-            \includegraphics[
-                width=0.8\linewidth,
-                trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
-                clip
-            ]{../images/raw_data.pdf}
-            \caption{Dataset format.}
-            % \source{Author, 2024.}
-            % \label{fig:my_image}
-        \end{figure}
-
-        \begin{note}
-            {Introduce your self}
-        \end{note}
-    \end{frame}
 
     \begin{frame}{Method}
         \begin{figure}[htp!]
@@ -462,51 +404,32 @@
         \end{note}
     \end{frame}
 
-    % \begin{frame}{Method overview}
-    %     % \begin{enumerate}
-    %     %     \item \textbf{Correlation estimation:} A correlation matrix is computed using partial correlation coefficients to capture direct relationships between metabolites while controlling for the influence of other variables.
-    %     %     \item \textbf{Metabolic network construction:} A metabolic network is generated in which an edge is established between two nodes when the absolute correlation coefficient satisfies $|\text{coef}| \geq 0.5$. Node attributes incorporate transformed retention time ($Rt$), mass-to-charge ratio ($Mz$), and signal intensity measurements.
-    %     %     \item \textbf{Graph representation learning:} Node embeddings are learned using the \texttt{T-GAE} architecture, which integrates \texttt{GIN} and \texttt{GINE} graph neural network layers to capture both topological and attribute information.
-    %     %     \item \textbf{Network alignment:} A node similarity matrix is computed using the K-Nearest Neighbors (\texttt{KNN}) algorithm to identify correspondences between metabolites across different metabolic networks.
-    %     % \end{enumerate}
+    \begin{frame}{Method overview}
+        % \begin{enumerate}
+        %     \item \textbf{Correlation estimation:} A correlation matrix is computed using partial correlation coefficients to capture direct relationships between metabolites while controlling for the influence of other variables.
+        %     \item \textbf{Metabolic network construction:} A metabolic network is generated in which an edge is established between two nodes when the absolute correlation coefficient satisfies $|\text{coef}| \geq 0.5$. Node attributes incorporate transformed retention time ($Rt$), mass-to-charge ratio ($Mz$), and signal intensity measurements.
+        %     \item \textbf{Graph representation learning:} Node embeddings are learned using the \texttt{T-GAE} architecture, which integrates \texttt{GIN} and \texttt{GINE} graph neural network layers to capture both topological and attribute information.
+        %     \item \textbf{Network alignment:} A node similarity matrix is computed using the K-Nearest Neighbors (\texttt{KNN}) algorithm to identify correspondences between metabolites across different metabolic networks.
+        % \end{enumerate}
 
-    %     \begin{enumerate}
-    %         \item \alert{Correlation estimation:} compute the partial correlation matrix $P = [\rho_{ij}]$ from mass espectrometry data.
-    %         \item \alert{Network construction:} build a metabolic network using a correlation threshold ($|\rho_{ij}| \geq 0.5$), incorporate node features (like $Rt$, $Mz$, $Avg\; intensities$) and edge features (like $|\rho_{ij}|$, $\operatorname{sign}(\rho_{ij})$).
-    %         \item \alert{Graph representation learning:} learn node embeddings with the \texttt{T-GAE} architecture based on \texttt{GIN} and \texttt{GINE} layers.
-    %         \item \alert{Network alignment:} identify metabolite correspondences using a \texttt{KNN}-based similarity matrix.
-    %     \end{enumerate}
+        \begin{enumerate}
+            \item \alert{Correlation estimation:} compute the partial correlation matrix $P = [\rho_{ij}]$ from mass espectrometry data.
+            \item \alert{Network construction:} build a metabolic network using a correlation threshold ($|\rho_{ij}| \geq 0.5$), incorporate node features (like $Rt$, $Mz$, $Avg\; intensities$) and edge features (like $|\rho_{ij}|$, $\operatorname{sign}(\rho_{ij})$).
+            \item \alert{Graph representation learning:} learn node embeddings with the \texttt{T-GAE} architecture based on \texttt{GIN} and \texttt{GINE} layers.
+            \item \alert{Network alignment:} identify metabolite correspondences using a \texttt{KNN}-based similarity matrix.
+        \end{enumerate}
 
-    %     \begin{note}
-    %         {Introduce your self}
-    %     \end{note}
-    % \end{frame}
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
 
 \section{Experiments}
     % Dataset
     % Baseline methods
     % Evaluation metrics
-    \begin{frame}{Experiments setup} % {Hardware/software}
-        The experiments were run on an AMD Ryzen Threadripper PRO 5955WX computer with 128 cores, 256 GB of RAM, 2x NVIDIA RTX A6000 with 48 GB of VRAM. The source code was implemented in Python with Scikit-learn and PyTorch Geometric.
-
-        \begin{table}[htp!]
-            % \scriptsize
-            \centering
-            \caption{Experiments setup.}
-            % \label{tab:table1}
-            \begin{tabular}{@{}ll@{}}\toprule
-                Features & Values \\\midrule
-                % Node embedding & \texttt{T-GAE} \\
-                GNNs architectures & \texttt{T-GAE} with \texttt{GIN}, \texttt{GINE} encoders \\
-                Embedding dimensions & 16, 32, 64 \\ %, 256, 512 \\
-                Optimizer & Adam with $lr=10^{-4}$, $weight\_decay=5 \times 10^{-4}$ \\
-                Early stopping & $patience=10$ \\
-                Epochs & 100 \\\midrule
-                Node features & $Mz$, $Rt$, $\operatorname{log}(Avg\; intensities)$, $Std\; intensities$, $Cv\; intensities$ \\
-                Edge features & $|\rho_{ij}|$, $\operatorname{sign}(\rho_{ij})$, $\rho_{ij}^{2}$ \\\midrule
-                Dataset & Cocoa, Mentos, Leaf, Synthetic \\\bottomrule
-            \end{tabular}
-        \end{table}
+    \begin{frame}{Hardware/software}
+        The experiments were run on an AMD Ryzen Threadripper PRO 5955WX computer with 128 cores, 256 GB of RAM, 2x NVIDIA RTX A6000 with 48 GB of VRAM. The source code was implemented in Python with PyTorch Geometric.
 
         \begin{note}
             {Introduce your self}
@@ -514,33 +437,15 @@
     \end{frame}
 
     \begin{frame}{Dataset}
-        \begin{columns}[t] % Option "c" centers vertically, while "t" aligns to the top.
-            \begin{column}{0.4\textwidth}
-                These 4 datasets were used in the experiments. \\
+        These 4 datasets were used in the experiments. \\
         
-                \begin{itemize}
-                    \item Cocoa (from ICOBA-PUCP)
-                    \item Mentos (from ICOBA-PUCP)
-                    % \item Mutant \cite{buettner2017non}
-                    \item Leaf \cite{gonzalez2023climate}
-                    \item Synthetic
-                \end{itemize}
-            \end{column}
-            
-            \begin{column}{0.6\textwidth}
-                \begin{figure}[htp!]
-                    \centering
-                    \includegraphics[
-                        width=1.0\linewidth,
-                        trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
-                        clip
-                    ]{../images/raw_data.pdf}
-                    \caption{Mass spectrometry data format.}
-                    % \source{Author, 2024.}
-                    % \label{fig:my_image}
-                \end{figure}
-            \end{column}
-        \end{columns}
+        \begin{itemize}
+            \item Synthetic
+            % \item Mutant \cite{buettner2017non}
+            \item Leaf \cite{gonzalez2023climate}
+            \item Mentos (from ICOBA-PUCP)
+            \item Cacao (from ICOBA-PUCP)
+        \end{itemize}
 
         % \begin{table}[htp!]
         %     % \scriptsize
@@ -563,62 +468,61 @@
         \end{note}
     \end{frame}
 
-    % \begin{frame}{Experiments setup}
+    \begin{frame}{Experiments setup}
 
-    %     \begin{table}[htp!]
-    %         % \scriptsize
-    %         \centering
-    %         \caption{Experiments setup.}
-    %         % \label{tab:table1}
-    %         \begin{tabular}{@{}ll@{}}\toprule
-    %             Features & Values \\\midrule
-    %             Node embedding & 
-    %             \texttt{T-GAE} \\
-    %             Architectures & \texttt{GIN}, \texttt{GINE} \\
-    %             Dimensions & 16, 32, 64 \\ %, 256, 512 \\
-    %             Optimizer & Adam with $lr=10^{-4}$, $weight\_decay=5 \times 10^{-4}$ \\
-    %             Early stopping & $patience=10$ \\
-    %             Epochs & 100 \\\midrule
-    %             Node features & $Mz$, $Rt$, $\operatorname{log}(Avg\; intensities)$, $Std\; intensities$, $Cv\; intensities$ \\
-    %             Edge features & $|\rho_{ij}|$, $\operatorname{sign}(\rho_{ij})$, $\rho_{ij}^{2}$ \\\midrule
-    %             Dataset & Cocoa, Mentos, Leaf, Synthetic \\\bottomrule
-    %         \end{tabular}
-    %     \end{table}
+        \begin{table}[htp!]
+            % \scriptsize
+            \centering
+            \caption{Experiments setup.}
+            % \label{tab:table1}
+            \begin{tabular}{@{}ll@{}}\toprule
+                Features & Values \\\midrule
+                Node embedding & 
+                \texttt{T-GAE} \\
+                Architectures & \texttt{GIN}, \texttt{GINE} \\
+                Dimensions & 16, 32, 64 \\ %, 256, 512 \\
+                Optimizer & Adam with $lr=10^{-4}$, $weight\_decay=5 \times 10^{-4}$ \\
+                Early stopping & $patience=10$ \\
+                Epochs & 100 \\\midrule
+                Node features & $Mz$, $Rt$, $\operatorname{log}(Avg\; intensities)$, $Std\; intensities$, $Cv\; intensities$ \\
+                Edge features & $|\rho_{ij}|$, $\operatorname{sign}(\rho_{ij})$, $\rho_{ij}^{2}$ \\\midrule
+                Dataset & Cacao, Leaf, Mentos \\\bottomrule
+            \end{tabular}
+        \end{table}
 
-    %     \begin{note}
-    %         {Introduce your self}
-    %     \end{note}
-    % \end{frame}
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
 
 \section{Results}
     \begin{frame}{Build metabolomic networks}
         \begin{table}[htp!]
             \scriptsize
             \centering
-            \caption{Cocoa dataset.} % December
+            \caption{Cacao dataset.} % December
             % \label{tab:table1}
             \begin{tabular}{@{}lcrrrcr@{}}\toprule
-                Group & Subgroup & $|V|$  & $|E|$ & Density & Is connected? \\\midrule
-                DryAmazonas    &	$1$ &	$559$	& $103\,333$ &	$0.662557$ &	True & \\
-                DryAmazonas    &	$2$ &	$559$	& $104\,793$ &	$0.671918$ &	True & \\\midrule
-                DryCusco       &	$1$ &	$559$	& $102\,044$ &	$0.654292$ & 	True & \\
-                DryCusco       &	$2$ &	$559$	& $102\,392$ &	$0.656523$ & 	True & \\\midrule
-                DrySanMartin   &	$1$ &	$559$	& $102\,897$ &	$0.659761$ &	True & \\
-                DrySanMartin   &	$2$ &	$559$	& $102\,453$ &	$0.656914$ &	True & \\\midrule
-                
-                FreshAmazonas  &	$1$ &	$559$ & $105\,331$ &	$0.675368$ &	True & \\
-                FreshAmazonas  &	$2$ &	$559$ & $105\,722$ &	$0.677875$ &	True & \\\midrule
-                FreshCusco     &	$1$ &	$559$ & $103\,348$ &	$0.662653$ &	True & \\
-                FreshCusco     &	$2$ &	$559$ & $104\,638$ &	$0.670924$ &	True & \\\midrule
-                FreshSanMartin &	$1$ &	$559$ & $104\,932$ &	$0.672809$ &	True & \\
-                FreshSanMartin &	$2$ &	$559$ & $105\,894$ &	$0.678977$ &	True & \\\bottomrule
+                Group & Subgroup & $|V|$  & |E| & Density & Is connected? \\\midrule
+                DryAmazonas    &	1 &	162	& 5001 &	0.383483 &	True & \\
+                DryAmazonas    &	2 &	162	& 4096 &	0.314010 &	True & \\\midrule
+                DrySanMartin   &	1 &	162	& 3817 &	0.292692 &	True & \\
+                DrySanMartin   &	2 &	162	& 3728 &	0.285868 &	True & \\\midrule
+                DryCusco       &	1 &	162	& 4265 &	0.327045 & 	True & \\
+                DryCusco       &	2 &	162	& 3348 &	0.256729 & 	True & \\\midrule
+                FreshAmazonas  &	1 &	162 & 3749 &	0.287478 &	True & \\
+                FreshAmazonas  &	2 &	162 & 3946 &	0.302584 &	False & \\\midrule
+                FreshSanMartin &	1 &	162 & 3818 &	0.292769 &	True & \\
+                FreshSanMartin &	2 &	162 & 3460 &	0.265317 &	True & \\\midrule
+                FreshCusco     &	1 &	162 & 3600 &	0.276052 &	True & \\
+                FreshCusco     &	2 &	162 & 3669 &	0.281343 &	True & \\\bottomrule 
             \end{tabular}
         \end{table}
 
         % \begin{table}[htp!]
         %     \scriptsize
         %     \centering
-        %     \caption{Cocoa dataset.} % December
+        %     \caption{Cacao dataset.} % December
         %     % \label{tab:table1}
         %     \begin{tabular}{@{}lcrrrcr@{}}\toprule
         %         Group & Subgroup & $|V|$  & |E| & Density & Is connected? \\\midrule
@@ -642,32 +546,15 @@
         \end{note}
     \end{frame}
 
-    \begin{frame}{Node embeddings (T-GAE)}
-        \begin{figure}
+    \begin{frame}{Node embedding (T-GAE)}
+        \begin{figure}[htp!]
             \centering
-            \begin{subfigure}{0.45\textwidth}
-                \centering
-                \includegraphics[
-                    width=\linewidth,
-                    trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
-                    clip
-                ]{../images/node_embeddings_2d_GINE_SecoCusco.pdf}
-                \caption{For Cocoa (DryCusco).}
-                % \source{Author, 2024.}
-            \end{subfigure}
-            % \hfill
-            \hspace{1cm}
-            \begin{subfigure}{0.4\textwidth}
-                \centering
-                \includegraphics[
-                    width=\linewidth,
-                    trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
-                    clip
-                ]{../images/node_embeddings_3d_GINE_SecoCusco.pdf}
-                \caption{For Cocoa (DryCusco).}
-                % \source{Author, 2024.}
-            \end{subfigure}
-            \caption{Node embeddings.}
+            \includegraphics[
+                width=0.45\linewidth,
+                trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
+                clip
+            ]{../images/node_embeddings_2d_GINE_SecoCusco.pdf}
+            \caption{Node embeddings (DryCusco).}
             % \source{Author, 2024.}
             % \label{fig:my_image}
         \end{figure}
@@ -683,7 +570,7 @@
                 \begin{table}[htp!]
                     \scriptsize
                     \centering
-                    \caption{Node alignments (DryCusco).}
+                    \caption{Node aligment (DryCusco).}
                     % \label{tab:table1}
                     \begin{tabular}{rl}\toprule
                         ID 1 & ID 2 \\\midrule                        
@@ -713,35 +600,20 @@
                     \caption{Node filtered \textbf{294/559} (DryCusco).}
                     % \label{tab:table1}
                     \begin{tabular}{lrrl}\toprule
-                        % ID & Rt & Mz & Metabolite name \\\midrule
-                        % 2	& 0.097	& 172.95681 & Unknown \\
-                        % 5	& 0.201	& 144.98254 & Unknown \\
-                        % 15	& 1.871	& 118.08675 & Betaine \\
-                        % 30	& 1.949	& 446.88860 & Unknown \\
-                        % % 32	& 2.020	& 151.03559 & [Similar to: N-Acetyl-L-cysteine; ΔMass: -13.0... \\
-                        % % 38	& 2.086	& 381.08003 & 5-({[3-chloro-5-(trifluoromethyl)-2-pyridyl]me... \\
-                        % 46 &	2.110	& 118.08671	& Betaine \\
-                        % 531	& 29.792	& 374.30350 & Docosahexaenoic acid ethyl ester \\
-                        % 532	& 29.794	& 352.32167 & Unknown \\
-                        % 537	& 29.838	& 454.42642 & N-Hexacosanoylglycine \\
-                        % 538	& 29.839	& 150.12816 & 2,6-Diethylaniline \\
-                        % 542	& 29.860	& 398.23344 & Drotaverine \\
-                        % 551	& 29.954	& 150.12807 & 2,6-Diethylaniline \\\bottomrule
-                        ID & Rt & Mz & Formula \\\midrule
-                        2	& $0.097$	& $172.95681$ & Unknown \\
-                        5	& $0.201$	& $144.98254$ & Unknown \\
-                        15	& $1.871$	& $118.08675$ & C5 H11 N O2 \\
-                        % 30	& $1.949$	& $446.88860$ & Unknown \\
+                        ID & Rt & Mz & Metabolite name \\\midrule
+                        2	& 0.097	& 172.95681 & Unknown \\
+                        5	& 0.201	& 144.98254 & Unknown \\
+                        15	& 1.871	& 118.08675 & Betaine \\
+                        30	& 1.949	& 446.88860 & Unknown \\
                         % 32	& 2.020	& 151.03559 & [Similar to: N-Acetyl-L-cysteine; ΔMass: -13.0... \\
-                        38	& $2.086$	& $381.08003$ & C14 H16 Cl F3 N4 O S \\
-                        46 & $2.110$	& $118.08671$	& C5 H11 N O2 \\
-                        $\cdots$ & $\cdots$ & $\cdots$ & $\cdots$ \\
-                        531	& $29.792$	& $374.30350$ & C24 H36 O2 \\
-                        % 532	& 29.794	& 352.32167 & Unknown \\
-                        537	& $29.838$	& $454.42642$ & C28 H55 N O3 \\
-                        538	& $29.839$	& $150.12816$ & C10 H15 N \\
-                        542	& $29.860$	& $398.23344$ & C24 H31 N O4 \\
-                        551	& $29.954$	& $150.12807$ & C10 H15 N \\\bottomrule
+                        % 38	& 2.086	& 381.08003 & 5-({[3-chloro-5-(trifluoromethyl)-2-pyridyl]me... \\
+                        46 &	2.110	& 118.08671	& Betaine \\
+                        531	& 29.792	& 374.30350 & Docosahexaenoic acid ethyl ester \\
+                        532	& 29.794	& 352.32167 & Unknown \\
+                        537	& 29.838	& 454.42642 & N-Hexacosanoylglycine \\
+                        538	& 29.839	& 150.12816 & 2,6-Diethylaniline \\
+                        542	& 29.860	& 398.23344 & Drotaverine \\
+                        551	& 29.954	& 150.12807 & 2,6-Diethylaniline \\\bottomrule
                     \end{tabular}
                 \end{table}
             \end{column}
@@ -752,29 +624,29 @@
         \end{note}
     \end{frame}
 
-    % \begin{frame}{Clustering analysis}
-    %     \begin{figure}[htp!]
-    %         \centering
-    %         \includegraphics[
-    %             width=0.6\linewidth,
-    %             trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
-    %             clip
-    %         ]{../images/clustering_GINE_SecoCusco.pdf}
-    %         \caption{Clustering (DryCusco).}
-    %         % \source{Author, 2024.}
-    %         % \label{fig:my_image}
-    %     \end{figure}
+    \begin{frame}{Clustering analysis}
+        \begin{figure}[htp!]
+            \centering
+            \includegraphics[
+                width=0.5\linewidth,
+                trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
+                clip
+            ]{../images/clustering_GINE_SecoCusco.pdf}
+            \caption{Clustering (DryCusco).}
+            % \source{Author, 2024.}
+            % \label{fig:my_image}
+        \end{figure}
 
-    %     \begin{note}
-    %         {Introduce your self}
-    %     \end{note}
-    % \end{frame}
+        \begin{note}
+            {Introduce your self}
+        \end{note}
+    \end{frame}
 
     \begin{frame}{Comparison of encoders}
         \begin{figure}[htp!]
             \centering
             \includegraphics[
-                width=0.7\linewidth,
+                width=0.8\linewidth,
                 trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
                 clip
             ]{../images/number_node_alignment.pdf}
@@ -782,8 +654,6 @@
             % \source{Author, 2024.}
             % \label{fig:my_image}
         \end{figure}
-
-        % Include clasificación -> GIN, grano, prediction
 
         \begin{note}
             {Introduce your self}
@@ -804,10 +674,10 @@
         % Features
         \begin{itemize}
             % Significant, noise
-            \item Features shared by Cocoa beans within the same group are retained, reducing the number of features before identification is attempted.
+            \item Features shared by cacao beans within the same group are retained, reducing the number of features before identification is attempted.
             
             % Prediction, inferencial
-            \item A core graph embedding is generated for each Cocoa bean, providing a compact representation that can be used as input to a classifier for subsequent Cocoa bean identification.
+            \item A core graph embedding is generated for each cacao bean, providing a compact representation that can be used as input to a classifier for subsequent cacao bean identification.
             
             % Worflow, improve  (atemporal)
             \item The alignment workflow enables samples acquired on different days to be integrated into a single dataset. This approach mitigates known batch effects, such as retention-time shifts, while the graph embedding favors correlations among signals rather than depending on their absolute intensity values.
@@ -849,21 +719,21 @@
     
     % Bibliography
     % \input{ref.bib}
-    % \begin{frame}[allowframebreaks]
-    %     \footnotesize % use this command to resize
-    %     \bibliography{ref}
-    %     \bibliographystyle{unsrt}
-    %     % \bibliographystyle{alpha}
+    \begin{frame}[allowframebreaks]
+        \footnotesize % use this command to resize
+        \bibliography{ref}
+        \bibliographystyle{unsrt}
+        % \bibliographystyle{alpha}
         
-    %     % \begin{itemize}
-    %     %     \item Erciyes, K. (2018). \textit{Guide to graph algorithms} % (pp. 15-35). Springer International Publishing.
-    %     %     \item Yao Ma, Jiliang Tang. (2021). \textit{Deep Learning on Graphs}.
-    %     %     \item Stamile C., Marzullo A., Deusebio E. (2021). \textit{Graph Machine Learning}.
-    %     %     \item Wu, L., Cui, P., Pei, J., Zhao, L., \& Guo, X. (2022). \textit{Graph neural networks: foundation, frontiers and applications}. % In Proceedings of the 28th ACM SIGKDD conference on knowledge discovery and data mining (pp. 4840-4841).            
-    %     %     % \item Knickerbocker D. (2023). \textit{Graph Network Science with Python}.
-    %     %     \item Knickerbocker, D. (2023). \textit{Network Science with Python}. % Packt Publishing Ltd.
-    %     %     \item Labonne, M. (2023). \textit{Hands-On Graph Neural Networks Using Python}.
-    %     %     \item Broadwater, K., \& Stillman, N. (2025). \textit{Graph neural networks in action}. % Simon and Schuster.
-    %     % \end{itemize}
-    % \end{frame}
+        % \begin{itemize}
+        %     \item Erciyes, K. (2018). \textit{Guide to graph algorithms} % (pp. 15-35). Springer International Publishing.
+        %     \item Yao Ma, Jiliang Tang. (2021). \textit{Deep Learning on Graphs}.
+        %     \item Stamile C., Marzullo A., Deusebio E. (2021). \textit{Graph Machine Learning}.
+        %     \item Wu, L., Cui, P., Pei, J., Zhao, L., \& Guo, X. (2022). \textit{Graph neural networks: foundation, frontiers and applications}. % In Proceedings of the 28th ACM SIGKDD conference on knowledge discovery and data mining (pp. 4840-4841).            
+        %     % \item Knickerbocker D. (2023). \textit{Graph Network Science with Python}.
+        %     \item Knickerbocker, D. (2023). \textit{Network Science with Python}. % Packt Publishing Ltd.
+        %     \item Labonne, M. (2023). \textit{Hands-On Graph Neural Networks Using Python}.
+        %     \item Broadwater, K., \& Stillman, N. (2025). \textit{Graph neural networks in action}. % Simon and Schuster.
+        % \end{itemize}
+    \end{frame}
 \end{document}

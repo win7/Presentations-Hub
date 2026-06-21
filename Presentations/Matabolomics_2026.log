@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2026/dev/Arch Linux) (preloaded format=xelatex 2026.4.6)  18 JUN 2026 13:35
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2026/dev/Arch Linux) (preloaded format=xelatex 2026.4.6)  21 JUN 2026 13:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1720,224 +1720,251 @@ LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/it' will be
 (Font)              scaled to size 6.6pt on input line 107.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/it' will be
 (Font)              scaled to size 5.5pt on input line 107.
+
+Overfull \vbox (15.93942pt too high) detected at line 107
+ []
+
 [1
+
+]
+File: ../images/PUCP_logo.png Graphic file (type bmp)
+<../images/PUCP_logo.png>
+File: ../images/PROCIENCIA-LOGO.png Graphic file (type bmp)
+<../images/PROCIENCIA-LOGO.png>
+ [2
 
 ]
 File: ../images/metabolomics_workflow.png Graphic file (type bmp)
 <../images/metabolomics_workflow.png>
+LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <6.6> not available
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 230.
 File: ../images/untargeted_data.pdf Graphic file (type pdf)
 <use ../images/untargeted_data.pdf>
- [2
 
-] [3
+
+LaTeX Warning: Citation `sindelar2020chemical' on page 3 undefined on input line 230.
+
+
+Overfull \vbox (22.6712pt too high) detected at line 230
+ []
+
+[3
+
+] [4
 
 ]
 File: ../images/graph_neural_networks.pdf Graphic file (type pdf)
 <use ../images/graph_neural_networks.pdf>
- [4
+ [5
 
 ]
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
-(Font)              scaled to size 10.95pt on input line 360.
+(Font)              scaled to size 10.95pt on input line 400.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
-(Font)              scaled to size 8.0pt on input line 360.
+(Font)              scaled to size 8.0pt on input line 400.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
-(Font)              scaled to size 6.1pt on input line 360.
+(Font)              scaled to size 6.1pt on input line 400.
 File: ../images/graph_alignment_problem.png Graphic file (type bmp)
 <../images/graph_alignment_problem.png>
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 6.5pt on input line 360.
+(Font)              scaled to size 6.5pt on input line 400.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 6.5pt on input line 360.
+(Font)              scaled to size 6.5pt on input line 400.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 6.5pt on input line 360.
+(Font)              scaled to size 6.5pt on input line 400.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 6.5pt on input line 360.
+(Font)              scaled to size 6.5pt on input line 400.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
-(Font)              scaled to size 6.5pt on input line 360.
+(Font)              scaled to size 6.5pt on input line 400.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
-(Font)              scaled to size 5.5pt on input line 360.
+(Font)              scaled to size 5.5pt on input line 400.
 
 
 LaTeX Font Warning: Font shape `U/lasy/m/n' in size <6.5> not available
-(Font)              size <6> substituted on input line 360.
+(Font)              size <6> substituted on input line 400.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <6.5> not available
-(Font)              size <6> substituted on input line 360.
+(Font)              size <6> substituted on input line 400.
 
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 6.5pt on input line 360.
+(Font)              scaled to size 6.5pt on input line 400.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 6.5pt on input line 360.
+(Font)              scaled to size 6.5pt on input line 400.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 6.5pt on input line 360.
+(Font)              scaled to size 6.5pt on input line 400.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 6.5pt on input line 360.
+(Font)              scaled to size 6.5pt on input line 400.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 6.5pt on input line 360.
+(Font)              scaled to size 6.5pt on input line 400.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/it' will be
-(Font)              scaled to size 6.5pt on input line 360.
+(Font)              scaled to size 6.5pt on input line 400.
 
-Overfull \vbox (6.81775pt too high) detected at line 360
+Overfull \vbox (6.81775pt too high) detected at line 400
  []
 
-[5
+[6
 
 ]
-File: ../images/T-GAE.jpg Graphic file (type bmp)
-<../images/T-GAE.jpg>
- [6
+
+LaTeX Warning: Citation `he2024t' on page 7 undefined on input line 422.
+
+File: ../images/T-GAE.png Graphic file (type bmp)
+<../images/T-GAE.png>
+[7
+
+]
+File: ../images/raw_data.pdf Graphic file (type pdf)
+<use ../images/raw_data.pdf>
+ [8
 
 ]
 File: ../images/Method_NA.pdf Graphic file (type pdf)
 <use ../images/Method_NA.pdf>
- [7
+ [9
 
-] [8
+]
+Overfull \vbox (12.02264pt too high) detected at line 514
+ []
 
-] [9
+[10
 
-] [10
+]
 
-] [11
+LaTeX Warning: Citation `gonzalez2023climate' on page 11 undefined on input line 564.
+
+File: ../images/raw_data.pdf Graphic file (type pdf)
+<use ../images/raw_data.pdf>
+[11
 
 ]
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 6.0pt on input line 547.
+(Font)              scaled to size 6.0pt on input line 643.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 6.0pt on input line 547.
+(Font)              scaled to size 6.0pt on input line 643.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 6.0pt on input line 547.
+(Font)              scaled to size 6.0pt on input line 643.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 6.0pt on input line 547.
+(Font)              scaled to size 6.0pt on input line 643.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
-(Font)              scaled to size 6.0pt on input line 547.
+(Font)              scaled to size 6.0pt on input line 643.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 6.0pt on input line 547.
+(Font)              scaled to size 6.0pt on input line 643.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 6.0pt on input line 547.
+(Font)              scaled to size 6.0pt on input line 643.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 6.0pt on input line 547.
+(Font)              scaled to size 6.0pt on input line 643.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 6.0pt on input line 547.
+(Font)              scaled to size 6.0pt on input line 643.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 547.
+(Font)              scaled to size 6.0pt on input line 643.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/it' will be
-(Font)              scaled to size 6.0pt on input line 547.
+(Font)              scaled to size 6.0pt on input line 643.
  [12
 
 ]
 File: ../images/node_embeddings_2d_GINE_SecoCusco.pdf Graphic file (type pdf)
 <use ../images/node_embeddings_2d_GINE_SecoCusco.pdf>
+File: ../images/node_embeddings_3d_GINE_SecoCusco.pdf Graphic file (type pdf)
+<use ../images/node_embeddings_3d_GINE_SecoCusco.pdf>
  [13
 
 ] [14
 
 ]
-File: ../images/clustering_GINE_SecoCusco.pdf Graphic file (type pdf)
-<use ../images/clustering_GINE_SecoCusco.pdf>
- [15
-
-]
 File: ../images/number_node_alignment.pdf Graphic file (type pdf)
 <use ../images/number_node_alignment.pdf>
- [16
+ [15
 
-] [17
+] [16
 
 ]
 LaTeX Font Info:    Font shape `T1/calligra/m/n' will be
-(Font)              scaled to size 35.82726pt on input line 718.
+(Font)              scaled to size 35.82726pt on input line 848.
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 24.88pt on input line 718.
+(Font)              scaled to size 24.88pt on input line 848.
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 18.2pt on input line 718.
+(Font)              scaled to size 18.2pt on input line 848.
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 13.7pt on input line 718.
+(Font)              scaled to size 13.7pt on input line 848.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 24.88pt on input line 718.
+(Font)              scaled to size 24.88pt on input line 848.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 18.2pt on input line 718.
+(Font)              scaled to size 18.2pt on input line 848.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 13.7pt on input line 718.
+(Font)              scaled to size 13.7pt on input line 848.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 24.88pt on input line 718.
+(Font)              scaled to size 24.88pt on input line 848.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 18.2pt on input line 718.
+(Font)              scaled to size 18.2pt on input line 848.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 13.7pt on input line 718.
+(Font)              scaled to size 13.7pt on input line 848.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 24.88pt on input line 718.
+(Font)              scaled to size 24.88pt on input line 848.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 18.2pt on input line 718.
+(Font)              scaled to size 18.2pt on input line 848.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 13.7pt on input line 718.
+(Font)              scaled to size 13.7pt on input line 848.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
-(Font)              scaled to size 24.88pt on input line 718.
+(Font)              scaled to size 24.88pt on input line 848.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
-(Font)              scaled to size 18.2pt on input line 718.
+(Font)              scaled to size 18.2pt on input line 848.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
-(Font)              scaled to size 13.7pt on input line 718.
+(Font)              scaled to size 13.7pt on input line 848.
 
 
 LaTeX Font Warning: Font shape `U/lasy/m/n' in size <18.2> not available
-(Font)              size <17.28> substituted on input line 718.
+(Font)              size <17.28> substituted on input line 848.
 
 
 LaTeX Font Warning: Font shape `U/lasy/m/n' in size <13.7> not available
-(Font)              size <14.4> substituted on input line 718.
+(Font)              size <14.4> substituted on input line 848.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <18.2> not available
-(Font)              size <17.28> substituted on input line 718.
+(Font)              size <17.28> substituted on input line 848.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <13.7> not available
-(Font)              size <14.4> substituted on input line 718.
+(Font)              size <14.4> substituted on input line 848.
 
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 24.88pt on input line 718.
+(Font)              scaled to size 24.88pt on input line 848.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 18.2pt on input line 718.
+(Font)              scaled to size 18.2pt on input line 848.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 13.7pt on input line 718.
+(Font)              scaled to size 13.7pt on input line 848.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 24.88pt on input line 718.
+(Font)              scaled to size 24.88pt on input line 848.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 18.2pt on input line 718.
+(Font)              scaled to size 18.2pt on input line 848.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 13.7pt on input line 718.
+(Font)              scaled to size 13.7pt on input line 848.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 24.88pt on input line 718.
+(Font)              scaled to size 24.88pt on input line 848.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 18.2pt on input line 718.
+(Font)              scaled to size 18.2pt on input line 848.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 13.7pt on input line 718.
+(Font)              scaled to size 13.7pt on input line 848.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 24.88pt on input line 718.
+(Font)              scaled to size 24.88pt on input line 848.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 18.2pt on input line 718.
+(Font)              scaled to size 18.2pt on input line 848.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 13.7pt on input line 718.
+(Font)              scaled to size 13.7pt on input line 848.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 24.88pt on input line 718.
+(Font)              scaled to size 24.88pt on input line 848.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 18.2pt on input line 718.
+(Font)              scaled to size 18.2pt on input line 848.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 13.7pt on input line 718.
+(Font)              scaled to size 13.7pt on input line 848.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/it' will be
-(Font)              scaled to size 24.88pt on input line 718.
+(Font)              scaled to size 24.88pt on input line 848.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/it' will be
-(Font)              scaled to size 18.2pt on input line 718.
+(Font)              scaled to size 18.2pt on input line 848.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/it' will be
-(Font)              scaled to size 13.7pt on input line 718.
-[18
-
-] (./Matabolomics_2026.bbl
-LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <9> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 5.
-) [19
+(Font)              scaled to size 13.7pt on input line 848.
+[17
 
 ]
 \tf@nav=\write7
@@ -1959,16 +1986,19 @@ L3 programming layer <2020/03/25>
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.92pt have occurred.
 
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `Matabolomics_2026.out' has not changed.
 (rerunfilecheck)             Checksum: 898092CBE3EF3319EE811B51BCE7C199;636.
  ) 
 Here is how much of TeX's memory you used:
- 49213 strings out of 470190
- 1066570 string characters out of 5479683
- 1755689 words of memory out of 5000000
- 76836 multiletter control sequences out of 15000+600000
- 681942 words of font info for 230 fonts, out of 8000000 for 9000
+ 49190 strings out of 470190
+ 1065739 string characters out of 5479683
+ 1758712 words of memory out of 5000000
+ 76813 multiletter control sequences out of 15000+600000
+ 681950 words of font info for 231 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 128i,20n,131p,1682b,974s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,20n,131p,1682b,1123s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Matabolomics_2026.pdf (19 pages).
+Output written on Matabolomics_2026.pdf (17 pages).

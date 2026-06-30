@@ -32,6 +32,19 @@
 \usepackage{forest}
 \usepackage[table]{xcolor}
 
+% Water mark
+\usepackage{tikz}
+\usepackage{eso-pic}
+\AddToShipoutPictureFG{
+\begin{tikzpicture}[remember picture,overlay]
+\node[
+    rotate=45,
+    scale=8,
+    text opacity=0.08
+] at (current page.center) {PUCP};
+\end{tikzpicture}
+}
+
 % Adjusts horizontal margins of the slide content
 % \setbeamersize{
 %     text margin left=20pt, % Left margin of the slide content
@@ -68,7 +81,7 @@
 }
 
 % \subtitle{Jiangnan University Academic Report Beamer Template}
-\institute[ICOBA-PUCP, UNSAAC, ]{\footnotesize{\inst{1} \texttt{Institute for Omics Sciences and Applied Biotechnology, Pontificia Universidad Católica del Perú}} \\ \footnotesize{\inst{2} \texttt{Department of Informatics, Universidad Nacional de San Antonio Abad del Cusco}} \\ \footnotesize{\inst{3} \texttt{German Cancer Research Center, Goethe University Frankfurt and German Cancer Consortium}}}
+\institute[ICOBA-PUCP, UNSAAC ]{\footnotesize{\inst{1} \texttt{Institute for Omics Sciences and Applied Biotechnology, Pontificia Universidad Católica del Perú}} \\ \footnotesize{\inst{2} \texttt{Department of Informatics, Universidad Nacional de San Antonio Abad del Cusco}} \\ \footnotesize{\inst{3} \texttt{German Cancer Research Center, Goethe University Frankfurt and German Cancer Consortium}}}
 % \institute[JNU]{\normalsize{\inst{1} School of Business \quad Jiangnan University \quad \textit{****@qq.com}}}
 
 % \institute[ICOBA-PUCP, UNSAAC]{
@@ -152,34 +165,34 @@
 
         Financial support was provided by CONCYTEC-Prociencia through project PE501086715-2024-PROCIENCIA. Also, I gratefully acknowledge the Pontificia Universidad Católica del Perú (PUCP) for the financial support provided for conference registration.
 
-        \begin{columns}[b] % Option "c" centers vertically, while "t" aligns to the top.
-            \begin{column}{0.5\textwidth}
-                \begin{figure}[htp!]
-                    \centering
-                    \includegraphics[
-                        width=0.8\linewidth,
-                        trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
-                        clip
-                    ]{../images/PUCP_logo.png}
-                    % \caption{Metabolomics workflow.}
-                    % \source{\cite{putri2014mass}} 
-                    % \label{fig:my_image}
-                \end{figure}
-            \end{column}
-            \begin{column}{0.5\textwidth}
-                \begin{figure}[htp!]
-                    \centering
-                    \includegraphics[
-                        width=0.6\linewidth,
-                        trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
-                        clip
-                    ]{../images/PROCIENCIA-LOGO.png}
-                    % \caption{Metabolomics workflow.}
-                    % \source{\cite{putri2014mass}} 
-                    % \label{fig:my_image}
-                \end{figure}
-            \end{column}
-        \end{columns}
+        \begin{figure}
+            \centering
+            \begin{subfigure}{0.4\textwidth}
+                \centering
+                \includegraphics[
+                    width=\linewidth,
+                    trim=0pt 50pt 0pt 50pt, % trim: left bottom right top
+                    clip
+                ]{../images/PUCP_logo.png}
+                % \caption{My image.}
+                % \source{Author, 2024.}
+            \end{subfigure}
+            % \hfill
+            \hspace{1cm}
+            \begin{subfigure}{0.4\textwidth}
+                \centering
+                \includegraphics[
+                    width=\linewidth,
+                    trim=0pt 130pt 0pt 150pt, % trim: left bottom right top
+                    clip
+                ]{../images/PROCIENCIA-LOGO.png}
+                % \caption{My image.}
+                % \source{Author, 2024.}
+            \end{subfigure}
+            % \caption{My image.}
+            % \source{Author, 2024.}
+            % \label{fig:my_image}
+        \end{figure}
 
         \begin{note}
             {Introduce your self}
@@ -196,7 +209,7 @@
         % \end{itemize}
 
         \begin{columns}[b] % Option "c" centers vertically, while "t" aligns to the top.
-            \begin{column}{0.6\textwidth}
+            \begin{column}{0.59\textwidth}
                 \begin{figure}[htp!]
                     \centering
                     \includegraphics[
@@ -204,12 +217,14 @@
                         trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
                         clip
                     ]{../images/metabolomics_workflow.png}
-                    \caption{Metabolomics workflow \footnote{Veličković, P., Cucurull, G., Casanova, A., Romero, A., Lio, P., \& Bengio, Y. (2017). Graph attention networks. arXiv preprint arXiv:1710.10903.}.}
+                    \caption{Metabolomics workflow \footnotemark[1].}
+    
+                    % Putri, S. P., \& Fukusaki, E. (Eds.). (2014). Mass spectrometry -based metabolomics: a practical guide. CRC Press.
                     % \source{\cite{putri2014mass}} 
                     % \label{fig:my_image}
                 \end{figure}
             \end{column}
-            \begin{column}{0.3\textwidth}
+            \begin{column}{0.41\textwidth}
                 \begin{figure}[htp!]
                     \centering
                     \includegraphics[
@@ -217,12 +232,19 @@
                         trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
                         clip
                     ]{../images/untargeted_data.pdf}
-                    \caption{Untargeted composition.}
-                    \source{Adapted from \cite{sindelar2020chemical}}
+                    \caption{Untargeted composition \footnotemark[2].}
+                    
+                    % Sindelar, M., \& Patti, G. J. (2020). Chemical discovery in the era of metabolomics. Journal of the American Chemical Society, 142(20), 9097-9105.
+                    % \caption{Untargeted composition.}
+                    % \source{Adapted from \cite{sindelar2020chemical}}
                     % \label{fig:my_image}
                 \end{figure}
             \end{column}
         \end{columns}
+
+        \footnotetext[1]{\tiny{Putri, S. P., \& Fukusaki, E. (Eds.). (2014). Mass spectrometry -based metabolomics: a practical guide.}}
+
+        \footnotetext[2]{\tiny{Sindelar, M., \& Patti, G. J. (2020). Chemical discovery in the era of metabolomics.}}
 
         \begin{note}
             {Introduce your self}
@@ -239,23 +261,36 @@
 
     \begin{frame}{Our objectives}
         % Aligning metabolomic networks for \alert{filter} mass spectrometry data via graph neural network models.
-        Aligning metabolomic networks to filter relevant features from Mass Spectrometry data via Graph Neural Networks.
+        Aligning metabolomic networks to filter relevant features from Mass Spectrometry (MS) data via Graph Neural Networks (GNNs). \newline
 
         % Filtering and detecting of significant changes between metabolomic networks using graph representation learning models and an anomaly detection algorithm to obtain reliable results in less time.
 
-        \begin{itemize}
-            % \item Improve the detection of significant changes between metabolomic networks using Graph Neural Network (GNN) models and to obtain reliable results in less time.
-            % \item Develop a pipeline for data processing and analysis.
-            % \item Develop a pipeline for data processing and analysis.
+        % \begin{itemize}
+        %     % \item Improve the detection of significant changes between metabolomic networks using Graph Neural Network (GNN) models and to obtain reliable results in less time.
+        %     % \item Develop a pipeline for data processing and analysis.
+        %     % \item Develop a pipeline for data processing and analysis.
 
-            \item Develop a pipeline for the analysis of metabolomic networks.
-            \item Model metabolomic networks from mass spectrometry data.
-            \item Implement GNN models to learn metabolite representations. % for network alignment tasks
-            \item Evaluate the effectiveness of the proposed GNN-based alignment approach.
-            % \item Comparison of the quality of node embeddings. % (generated by GNN models) for the analysis of metabolomic networks. % check
-            % \item Evaluation of execution times in the generation and manipulation of embeddings.
-            % \item Implement a web application for the analysis of metabolomic networks.
-            % \item Develop a web application.
+        %     %% \item Develop a workflow for the analysis of metabolomic networks.
+        %     %% \item Model metabolomic networks from mass spectrometry data.
+        %     %% \item Implement GNN models to learn metabolite representations. % for network alignment tasks
+        %     %% \item Evaluate the effectiveness of the proposed GNN-based alignment approach.
+        %     % \item Comparison of the quality of node embeddings. % (generated by GNN models) for the analysis of metabolomic networks. % check
+        %     % \item Evaluation of execution times in the generation and manipulation of embeddings.
+        %     % \item Implement a web application for the analysis of metabolomic networks.
+        %     % \item Develop a web application.
+
+        %     \item Design a workflow for metabolomic network analysis.
+        %     \item Construct metabolomic networks from Mz data.
+        %     \item Develop Graph Neural Network models to learn metabolite representations.
+        %     \item Assess the effectiveness of the proposed GNN-based approach for metabolomic network alignment.
+        % \end{itemize}
+
+        \begin{itemize}
+            \item Construct metabolomic networks from MS data and identify shared features through network alignment.
+            
+            \item Apply GNN models to learn metabolite representations that capture the structural properties of metabolomic networks.
+            
+            \item Explore the potential of GNN-based alignment to integrate metabolomic datasets acquired on different days while mitigating batch effects.
         \end{itemize}
 
         \begin{note}
@@ -400,8 +435,9 @@
     \end{frame}
 
     \begin{frame}{Base GNN model}
-        \texttt{T-GAE}: Transferable Graph Autoencoder for Network Alignment \cite{he2024t}.
-
+        % \texttt{T-GAE}: Transferable Graph Autoencoder for Network Alignment \cite{he2024t}.
+        \texttt{T-GAE}: Transferable Graph Autoencoder for Network Alignment\footnotemark[3]
+        
         % \scriptsize (He, J., Kanatsoulis, C., \& Ribeiro, A., 2024)
 
         \begin{figure}[htp!]
@@ -415,6 +451,8 @@
             % \source{Author, 2024.}
             % \label{fig:my_image}
         \end{figure}
+
+        \footnotetext[3]{\tiny{He, J., Kanatsoulis, C., \& Ribeiro, A. (2024). T-gae: Transferable graph autoencoder for network alignment.}}
 
         \begin{note}
             {Introduce your self}
@@ -487,10 +525,11 @@
     % Baseline methods
     % Evaluation metrics
     \begin{frame}{Experiments setup} % {Hardware/software}
-        The experiments were run on an AMD Ryzen Threadripper PRO 5955WX computer with 128 cores, 256 GB of RAM, 2x NVIDIA RTX A6000 with 48 GB of VRAM. The source code was implemented in Python with Scikit-learn and PyTorch Geometric.
+        % The experiments were run on an AMD Ryzen Threadripper PRO 5955WX computer with 128 cores, 256 GB of RAM, 2x NVIDIA RTX A6000 with 48 GB of VRAM. The source code was implemented in \texttt{Python} with \texttt{Scikit-learn} and \texttt{PyTorch Geometric}.
+        The experiments were run on computer with 128 cores, 256 GB of RAM, 2x NVIDIA RTX A6000 with 48 GB of VRAM. The source code was implemented in \texttt{Python} with \texttt{Scikit-learn} and \texttt{PyTorch Geometric}.
 
         \begin{table}[htp!]
-            % \scriptsize
+            \footnotesize % \scriptsize
             \centering
             \caption{Experiments setup.}
             % \label{tab:table1}
@@ -504,7 +543,7 @@
                 Epochs & 100 \\\midrule
                 Node features & $Mz$, $Rt$, $\operatorname{log}(Avg\; intensities)$, $Std\; intensities$, $Cv\; intensities$ \\
                 Edge features & $|\rho_{ij}|$, $\operatorname{sign}(\rho_{ij})$, $\rho_{ij}^{2}$ \\\midrule
-                Dataset & Cocoa, Mentos, Leaf, Synthetic \\\bottomrule
+                Dataset & Cocoa, Mentos, Leaf \\\bottomrule
             \end{tabular}
         \end{table}
 
@@ -516,14 +555,16 @@
     \begin{frame}{Dataset}
         \begin{columns}[t] % Option "c" centers vertically, while "t" aligns to the top.
             \begin{column}{0.4\textwidth}
-                These 4 datasets were used in the experiments. \\
+                These 3 datasets were used in the experiments. \\
         
                 \begin{itemize}
-                    \item Cocoa (from ICOBA-PUCP)
-                    \item Mentos (from ICOBA-PUCP)
+                    \item Cocoa \footnotemark[4] (\small{from ICOBA-PUCP)}
+                    \item Mentos \footnotemark[5] (\small{from ICOBA-PUCP)}
                     % \item Mutant \cite{buettner2017non}
-                    \item Leaf \cite{gonzalez2023climate}
-                    \item Synthetic
+                    % \item Leaf  \cite{gonzalez2023climate}
+                    \item Leaf \footnotemark[6]
+                    
+                    % \item Synthetic
                 \end{itemize}
             \end{column}
             
@@ -541,6 +582,15 @@
                 \end{figure}
             \end{column}
         \end{columns}
+
+        \footnotetext[4]{\tiny{Cocoa dataset, available at: Poster number 1259 by Vanessa Jessenia Mayorga Martino.}}
+
+        \footnotetext[5]{\tiny{lvarez-Mamani, E., Buettner, F., Beltran-Castanon, C. A., \& Ibanez, A. J. (2024). Exploratory analysis of metabolic changes using mass spectrometry data and graph embeddings.}}
+        % Alvarez-Mamani, E., Buettner, F., Beltran-Castanon, C. A., & Ibanez, A. J. (2024). Exploratory analysis of metabolic changes using mass spectrometry data and graph embeddings. Scientific reports, 14(1), 29570.
+
+        \footnotetext[6]{\tiny{González-Teuber, M., Palma-Onetto, V., Aguirre, C., Ibáñez, A. J., \& Mithöfer, A. (2023). Climate change-related warming-induced shifts in leaf chemical traits favor nutrition of the specialist herbivore Battus polydamas archidamas.}}
+        
+        % González-Teuber, M., Palma-Onetto, V., Aguirre, C., Ibáñez, A. J., & Mithöfer, A. (2023). Climate change-related warming-induced shifts in leaf chemical traits favor nutrition of the specialist herbivore Battus polydamas archidamas. Frontiers in Ecology and Evolution, 11, 1152489.
 
         % \begin{table}[htp!]
         %     % \scriptsize
@@ -591,9 +641,9 @@
     % \end{frame}
 
 \section{Results}
-    \begin{frame}{Build metabolomic networks}
+    \begin{frame}{Metabolomic networks}
         \begin{table}[htp!]
-            \scriptsize
+            \footnotesize % \scriptsize
             \centering
             \caption{Cocoa dataset.} % December
             % \label{tab:table1}
@@ -642,7 +692,7 @@
         \end{note}
     \end{frame}
 
-    \begin{frame}{Node embeddings (T-GAE)}
+    \begin{frame}{Node embeddings}
         \begin{figure}
             \centering
             \begin{subfigure}{0.45\textwidth}
@@ -681,7 +731,7 @@
         \begin{columns}[t] % Option "c" centers vertically, while "t" aligns to the top.
             \begin{column}{0.4\textwidth}
                 \begin{table}[htp!]
-                    \scriptsize
+                    \footnotesize % \scriptsize
                     \centering
                     \caption{Node alignments (DryCusco).}
                     % \label{tab:table1}
@@ -708,9 +758,9 @@
             
             \begin{column}{0.6\textwidth}
                 \begin{table}[htp!]
-                    \scriptsize
+                    \footnotesize % \scriptsize
                     \centering
-                    \caption{Node filtered \textbf{294/559} (DryCusco).}
+                    \caption{Node filtered \alert{294/559} (DryCusco).}
                     % \label{tab:table1}
                     \begin{tabular}{lrrl}\toprule
                         % ID & Rt & Mz & Metabolite name \\\midrule
@@ -728,20 +778,20 @@
                         % 542	& 29.860	& 398.23344 & Drotaverine \\
                         % 551	& 29.954	& 150.12807 & 2,6-Diethylaniline \\\bottomrule
                         ID & Rt & Mz & Formula \\\midrule
-                        2	& $0.097$	& $172.95681$ & Unknown \\
-                        5	& $0.201$	& $144.98254$ & Unknown \\
-                        15	& $1.871$	& $118.08675$ & C5 H11 N O2 \\
+                        \alert{2}	& $0.097$	& $172.95681$ & Unknown \\
+                        \alert{5}	& $0.201$	& $144.98254$ & Unknown \\
+                        15	& $1.871$	& $118.08675$ & $\mathrm{C_{5}H_{11}NO_2}$ \\
                         % 30	& $1.949$	& $446.88860$ & Unknown \\
                         % 32	& 2.020	& 151.03559 & [Similar to: N-Acetyl-L-cysteine; ΔMass: -13.0... \\
-                        38	& $2.086$	& $381.08003$ & C14 H16 Cl F3 N4 O S \\
-                        46 & $2.110$	& $118.08671$	& C5 H11 N O2 \\
+                        38	& $2.086$	& $381.08003$ & $\mathrm{C_{14}H_{16}ClF_{3}N_{4}OS}$ \\
+                        46 & $2.110$	& $118.08671$	& $\mathrm{C_{5}H_{11}NO_{2}}$ \\
                         $\cdots$ & $\cdots$ & $\cdots$ & $\cdots$ \\
-                        531	& $29.792$	& $374.30350$ & C24 H36 O2 \\
+                        531	& $29.792$	& $374.30350$ & $\mathrm{C_{24}H_{36}O_{2}}$ \\
                         % 532	& 29.794	& 352.32167 & Unknown \\
-                        537	& $29.838$	& $454.42642$ & C28 H55 N O3 \\
-                        538	& $29.839$	& $150.12816$ & C10 H15 N \\
-                        542	& $29.860$	& $398.23344$ & C24 H31 N O4 \\
-                        551	& $29.954$	& $150.12807$ & C10 H15 N \\\bottomrule
+                        537	& $29.838$	& $454.42642$ & $\mathrm{C_{28}H_{55}NO_{3}}$ \\
+                        538	& $29.839$	& $150.12816$ & $\mathrm{C_{10}H_{15}N}$ \\
+                        \alert{542}	& $29.860$	& $398.23344$ & $\mathrm{C_{24}H_{31}NO_{4}}$ \\
+                        \alert{551}	& $29.954$	& $150.12807$ & $\mathrm{C_{10}H_{15}N}$ \\\bottomrule
                     \end{tabular}
                 \end{table}
             \end{column}
@@ -770,18 +820,37 @@
     %     \end{note}
     % \end{frame}
 
-    \begin{frame}{Comparison of encoders}
-        \begin{figure}[htp!]
-            \centering
-            \includegraphics[
-                width=0.7\linewidth,
-                trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
-                clip
-            ]{../images/number_node_alignment.pdf}
-            \caption{\texttt{GIN} vs. \texttt{GINE}.}
-            % \source{Author, 2024.}
-            % \label{fig:my_image}
-        \end{figure}
+    \begin{frame}{Additional results}
+        \begin{columns}[b] % Option "c" centers vertically, while "t" aligns to the top.
+            \begin{column}{0.3\textwidth}
+                \begin{figure}[htp!]
+                    \centering
+                    \includegraphics[
+                        width=0.95\linewidth,
+                        trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
+                        clip
+                    ]{../images/cm_exp8}
+                    \caption{Downstream task.}
+                    % \source{Author, 2024.}
+                    % \label{fig:my_image}
+                \end{figure}
+            \end{column}
+            \begin{column}{0.7\textwidth}
+                \begin{figure}[htp!]
+                    \centering
+                    \includegraphics[
+                        width=1.05\linewidth,
+                        trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
+                        clip
+                    ]{../images/number_node_alignment.pdf}
+                    \caption{\texttt{GIN} vs. \texttt{GINE}.}
+                    % \source{Author, 2024.}
+                    % \label{fig:my_image}
+                \end{figure}
+            \end{column}
+        \end{columns}
+
+        
 
         % Include clasificación -> GIN, grano, prediction
 
@@ -799,7 +868,7 @@
 
 \section{Conclusions}
     \begin{frame}{Conclusions}
-        Our proposal, is a approach to the exploratory analysis of metabolic networks.
+        % Our proposal, is a approach to the exploratory analysis of metabolic networks.
 
         % Features
         \begin{itemize}
@@ -839,12 +908,71 @@
 \section*{References}
     \begin{frame}
         \begin{center}
-            {\Huge\calligra Thanks!} \\
+            {\LARGE\calligra Thanks!} \\
             % {\Huge\textit{Thank you for your attention!}}\\
             {\Huge $\infty$} \\
-            edwin.alvarez@pucp.edu.pe \\
-            \url{https://github.com/win7}
+            % edwin.alvarez@pucp.edu.pe \\
+            % \url{https://github.com/win7}
+            \begin{figure}[htp!]
+                \centering
+                \includegraphics[
+                    width=0.07\linewidth,
+                    trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
+                    clip
+                ]{../images/qr_link.png}
+                % \caption{Metabolomics workflow.}
+                % \source{\cite{putri2014mass}} 
+                % \label{fig:my_image}
+            \end{figure}
+
         \end{center}
+
+        \begin{center}
+            {\LARGE Acknowledgments} \\
+            \footnotesize Financial support was provided by \texttt{CONCYTEC-Prociencia} through project PE501086715-2024-PROCIENCIA. Also, I gratefully acknowledge the Pontificia Universidad Católica del Perú (\texttt{PUCP}) for the financial support provided for conference registration.
+        \end{center}
+
+        \begin{figure}
+            \centering
+            \begin{subfigure}{0.18\textwidth}
+                \centering
+                \includegraphics[
+                    width=\linewidth,
+                    trim=0pt 50pt 0pt 50pt, % trim: left bottom right top
+                    clip
+                ]{../images/PUCP_logo.png}
+                % \caption{My image.}
+                % \source{Author, 2024.}
+            \end{subfigure}
+            % \hfill
+            \hspace{1cm}
+            \begin{subfigure}{0.18\textwidth}
+                \centering
+                \includegraphics[
+                    width=\linewidth,
+                    trim=0pt 130pt 0pt 150pt, % trim: left bottom right top
+                    clip
+                ]{../images/PROCIENCIA-LOGO.png}
+                % \caption{My image.}
+                % \source{Author, 2024.}
+            \end{subfigure}
+            % \caption{My image.}
+            % \source{Author, 2024.}
+            % \label{fig:my_image}
+        \end{figure}
+
+        \begin{figure}[htp!]
+                \centering
+                \includegraphics[
+                    width=0.65\linewidth,
+                    trim=0pt 0pt 0pt 0pt, % trim: left bottom right top
+                    clip
+                ]{../images/teams.pdf}
+                % \caption{Metabolomics workflow.}
+                % \source{\cite{putri2014mass}} 
+                % \label{fig:my_image}
+            \end{figure}
+
     \end{frame}
     
     % Bibliography

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2026/dev/Arch Linux) (preloaded format=xelatex 2026.4.6)  5 JUL 2026 19:59
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2026/dev/Arch Linux) (preloaded format=xelatex 2026.4.6)  5 JUL 2026 20:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1423,13 +1423,12 @@ Package fontspec Info:
 (fontspec)             - 'bold slanted small caps'  (b/scsl) with NFSS spec.:
 (fontspec)             <->s*[1]"[TeXGyreTermesX-BoldSlanted.otf]/OT:script=latn;language=dflt;-ss05;+tnum;+lnum;+smcp;+pcap;mapping=tex-text;"
 
-
-No file Matabolomics_2026.aux.
+ (./Matabolomics_2026.aux)
 \openout1 = `Matabolomics_2026.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 111.
 LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line 111.
-(/usr/share/texmf-dist/tex/latex/newtx/omlntxmi.fd
+ (/usr/share/texmf-dist/tex/latex/newtx/omlntxmi.fd
 File: omlntxmi.fd 2015/08/25 Fontinst v1.933 font definitions for OML/ntxmi.
 )
 LaTeX Font Info:    ... okay on input line 111.
@@ -1503,11 +1502,9 @@ LaTeX Font Info:    ... okay on input line 111.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring OFF on input line 111.
+(./Matabolomics_2026.out) (./Matabolomics_2026.out)
 \@outlinefile=\write6
 \openout6 = `Matabolomics_2026.out'.
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
 
 \symnumbers=\mathgroup12
 \sympureletters=\mathgroup13
@@ -1547,7 +1544,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  TU/TeXGyreTermesX(0)/m/it --> TU/TeXGyreTermesX(0)/b/it on input line 111.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  TU/lmtt/m/n --> TU/lmtt/b/n on input line 111.
-(/usr/share/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
+ (/usr/share/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 ) (/usr/share/texmf-dist/tex/latex/translator/translator-bibliography-dictionary-English.dict
 Dictionary: translator-bibliography-dictionary, Language: English 
@@ -1565,10 +1562,9 @@ LaTeX Info: Command `\ddddot' is already robust on input line 111.
 \c@lstlisting=\count495
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-
-No file Matabolomics_2026.nav.
+ (./Matabolomics_2026.nav)
 LaTeX Font Info:    Trying to load font information for OT1+minntx on input line 120.
-(/usr/share/texmf-dist/tex/latex/newtx/ot1minntx.fd
+ (/usr/share/texmf-dist/tex/latex/newtx/ot1minntx.fd
 File: ot1minntx.fd 2023/09/09 v1.1 font definition file for OT1/minntx
 )
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
@@ -2012,7 +2008,7 @@ Overfull \vbox (14.2136pt too high) detected at line 976
 \tf@snm=\write9
 \openout9 = `Matabolomics_2026.snm'.
 
- [18] (./Matabolomics_2026.aux)
+ (./Matabolomics_2026.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2020/03/25>
@@ -2025,25 +2021,16 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-
-LaTeX Warning: Temporary extra page added at the end. Rerun to get it removed.
-
-
-Package rerunfilecheck Warning: File `Matabolomics_2026.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Matabolomics_2026.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  898092CBE3EF3319EE811B51BCE7C199;636.
+Package rerunfilecheck Info: File `Matabolomics_2026.out' has not changed.
+(rerunfilecheck)             Checksum: 898092CBE3EF3319EE811B51BCE7C199;636.
  ) 
 Here is how much of TeX's memory you used:
- 49342 strings out of 470190
- 1069722 string characters out of 5479683
- 1753502 words of memory out of 5000000
- 76961 multiletter control sequences out of 15000+600000
+ 49458 strings out of 470190
+ 1071469 string characters out of 5479683
+ 1761502 words of memory out of 5000000
+ 77069 multiletter control sequences out of 15000+600000
  686720 words of font info for 249 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 128i,16n,131p,1682b,986s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,20n,131p,1682b,986s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Matabolomics_2026.pdf (18 pages).
+Output written on Matabolomics_2026.pdf (17 pages).

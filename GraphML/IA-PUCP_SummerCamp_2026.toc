@@ -1,8 +1,0 @@
-\babel@toc {english}{}\relax 
-\beamer@sectionintoc {1}{Graph theory}{4}{0}{1}
-\beamer@sectionintoc {2}{Graph machine learning}{32}{0}{2}
-\beamer@subsectionintoc {2}{1}{Preliminaries}{33}{0}{2}
-\beamer@subsectionintoc {2}{2}{Shallow embeddings}{42}{0}{2}
-\beamer@subsectionintoc {2}{3}{Graph Neural Network (GNN)}{54}{0}{2}
-\beamer@sectionintoc {3}{Applications}{66}{0}{3}
-\beamer@sectionintoc {4}{Resources}{77}{0}{4}
